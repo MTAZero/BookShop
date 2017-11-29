@@ -69,6 +69,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="GUI\FrmDoiMatKhau.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\FrmDoiMatKhau.Designer.cs">
+      <DependentUpon>FrmDoiMatKhau.cs</DependentUpon>
+    </Compile>
     <Compile Include="GUI\FrmLogin.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -80,6 +86,24 @@
     </Compile>
     <Compile Include="GUI\FrmMain.Designer.cs">
       <DependentUpon>FrmMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\FrmThongTinCaNhan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\FrmThongTinCaNhan.Designer.cs">
+      <DependentUpon>FrmThongTinCaNhan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\ucDanhSachTacGia.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GUI\ucDanhSachTacGia.Designer.cs">
+      <DependentUpon>ucDanhSachTacGia.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\ucDanhSachVanPhongPham.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GUI\ucDanhSachVanPhongPham.Designer.cs">
+      <DependentUpon>ucDanhSachVanPhongPham.cs</DependentUpon>
     </Compile>
     <Compile Include="GUI\ucDanhSachDauSach.cs">
       <SubType>UserControl</SubType>
@@ -117,6 +141,12 @@
     <Compile Include="GUI\ucNhapHang.Designer.cs">
       <DependentUpon>ucNhapHang.cs</DependentUpon>
     </Compile>
+    <Compile Include="GUI\ucThongKeBanHang.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GUI\ucThongKeBanHang.Designer.cs">
+      <DependentUpon>ucThongKeBanHang.cs</DependentUpon>
+    </Compile>
     <Compile Include="GUI\ucTimKiemSach.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -125,11 +155,23 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="GUI\FrmDoiMatKhau.resx">
+      <DependentUpon>FrmDoiMatKhau.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="GUI\FrmLogin.resx">
       <DependentUpon>FrmLogin.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\FrmMain.resx">
       <DependentUpon>FrmMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\FrmThongTinCaNhan.resx">
+      <DependentUpon>FrmThongTinCaNhan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\ucDanhSachTacGia.resx">
+      <DependentUpon>ucDanhSachTacGia.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\ucDanhSachVanPhongPham.resx">
+      <DependentUpon>ucDanhSachVanPhongPham.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\ucDanhSachDauSach.resx">
       <DependentUpon>ucDanhSachDauSach.cs</DependentUpon>
@@ -148,6 +190,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\ucNhapHang.resx">
       <DependentUpon>ucNhapHang.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\ucThongKeBanHang.resx">
+      <DependentUpon>ucThongKeBanHang.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\ucTimKiemSach.resx">
       <DependentUpon>ucTimKiemSach.cs</DependentUpon>

@@ -78,8 +78,42 @@ namespace BookShop.GUI
             panelMain.Controls.Add(uc);
         }
 
+        private void barVanPhongPham_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            panelMain.Controls.Clear();
+            ucDanhSachVanPhongPham uc = new ucDanhSachVanPhongPham();
+            uc.Dock = DockStyle.Fill;
+            panelMain.Controls.Add(uc);
+        }
+
+        private void barThongKeBanHang_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            panelMain.Controls.Clear();
+            ucThongKeBanHang uc = new ucThongKeBanHang();
+            uc.Dock = DockStyle.Fill;
+            panelMain.Controls.Add(uc);
+        }
+        private void barTacGia_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            panelMain.Controls.Clear();
+            ucDanhSachTacGia uc = new ucDanhSachTacGia();
+            uc.Dock = DockStyle.Fill;
+            panelMain.Controls.Add(uc);
+        }
+
+
         #endregion
 
+        private void barThongTinCaNhan_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            FrmThongTinCaNhan form = new FrmThongTinCaNhan();
+            form.ShowDialog();
+        }
 
+        private void barDoiMatKhau_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            FrmDoiMatKhau form = new FrmDoiMatKhau();
+            form.ShowDialog();
+        }
     }
 }
