@@ -102,7 +102,7 @@ namespace BookShop.GUI
         }
 
 
-        #endregion
+        
 
         private void barThongTinCaNhan_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
@@ -115,5 +115,9 @@ namespace BookShop.GUI
             FrmDoiMatKhau form = new FrmDoiMatKhau();
             form.ShowDialog();
         }
+
+        #endregion
+
+
     }
 }
