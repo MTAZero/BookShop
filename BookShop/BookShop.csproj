@@ -93,6 +93,36 @@
     <Compile Include="GUI\ucDanhSachNhanVien.Designer.cs">
       <DependentUpon>ucDanhSachNhanVien.cs</DependentUpon>
     </Compile>
+    <Compile Include="GUI\ucDanhSachNhaXuatBan.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GUI\ucDanhSachNhaXuatBan.Designer.cs">
+      <DependentUpon>ucDanhSachNhaXuatBan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\ucDanhSachTheLoai.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GUI\ucDanhSachTheLoai.Designer.cs">
+      <DependentUpon>ucDanhSachTheLoai.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\ucBanHang.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GUI\ucBanHang.Designer.cs">
+      <DependentUpon>ucBanHang.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\ucNhapHang.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GUI\ucNhapHang.Designer.cs">
+      <DependentUpon>ucNhapHang.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\ucTimKiemSach.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GUI\ucTimKiemSach.Designer.cs">
+      <DependentUpon>ucTimKiemSach.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="GUI\FrmLogin.resx">
@@ -106,6 +136,21 @@
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\ucDanhSachNhanVien.resx">
       <DependentUpon>ucDanhSachNhanVien.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\ucDanhSachNhaXuatBan.resx">
+      <DependentUpon>ucDanhSachNhaXuatBan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\ucDanhSachTheLoai.resx">
+      <DependentUpon>ucDanhSachTheLoai.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\ucBanHang.resx">
+      <DependentUpon>ucBanHang.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\ucNhapHang.resx">
+      <DependentUpon>ucNhapHang.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\ucTimKiemSach.resx">
+      <DependentUpon>ucTimKiemSach.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\licenses.licx" />
     <EmbeddedResource Include="Properties\Resources.resx">

@@ -34,6 +34,50 @@ namespace BookShop.GUI
             uc.Dock = DockStyle.Fill;
             panelMain.Controls.Add(uc);
         }
+
+        
+
+        private void barTheLoai_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            panelMain.Controls.Clear();
+            ucDanhSachTheLoai uc = new ucDanhSachTheLoai();
+            uc.Dock = DockStyle.Fill;
+            panelMain.Controls.Add(uc);
+        }
+        
+
+        private void barNhaXuatBan_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            panelMain.Controls.Clear();
+            ucDanhSachNhaXuatBan uc = new ucDanhSachNhaXuatBan();
+            uc.Dock = DockStyle.Fill;
+            panelMain.Controls.Add(uc);
+        }
+
+        private void barNhapHang_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            panelMain.Controls.Clear();
+            ucNhapHang uc = new ucNhapHang();
+            uc.Dock = DockStyle.Fill;
+            panelMain.Controls.Add(uc);
+        }
+
+        private void barBanHang_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            panelMain.Controls.Clear();
+            ucBanHang uc = new ucBanHang();
+            uc.Dock = DockStyle.Fill;
+            panelMain.Controls.Add(uc);
+        }
+
+        private void barTimKiemSach_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            panelMain.Controls.Clear();
+            ucTimKiemSach uc = new ucTimKiemSach();
+            uc.Dock = DockStyle.Fill;
+            panelMain.Controls.Add(uc);
+        }
+
         #endregion
 
 
