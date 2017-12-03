@@ -33,6 +33,8 @@
             this.defaultLookAndFeel1 = new DevExpress.LookAndFeel.DefaultLookAndFeel(this.components);
             this.panel4 = new System.Windows.Forms.Panel();
             this.panelThongTin = new System.Windows.Forms.Panel();
+            this.txtTaiKhoan = new DevExpress.XtraEditors.TextEdit();
+            this.lblTaiKhoan = new System.Windows.Forms.Label();
             this.cbxGioiTinh = new DevExpress.XtraEditors.ComboBoxEdit();
             this.cbxChucVu = new DevExpress.XtraEditors.ComboBoxEdit();
             this.txtQueQuan = new DevExpress.XtraEditors.MemoEdit();
@@ -66,10 +68,9 @@
             this.btnSua = new DevExpress.XtraEditors.SimpleButton();
             this.btnThem = new DevExpress.XtraEditors.SimpleButton();
             this.imgList = new DevExpress.Utils.ImageCollection(this.components);
-            this.txtTaiKhoan = new DevExpress.XtraEditors.TextEdit();
-            this.lblTaiKhoan = new System.Windows.Forms.Label();
             this.panel4.SuspendLayout();
             this.panelThongTin.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.txtTaiKhoan.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cbxGioiTinh.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cbxChucVu.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtQueQuan.Properties)).BeginInit();
@@ -87,7 +88,6 @@
             this.panelTimKiem.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.imgList)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtTaiKhoan.Properties)).BeginInit();
             this.SuspendLayout();
             // 
             // defaultLookAndFeel1
@@ -130,6 +130,27 @@
             this.panelThongTin.Name = "panelThongTin";
             this.panelThongTin.Size = new System.Drawing.Size(921, 369);
             this.panelThongTin.TabIndex = 1;
+            // 
+            // txtTaiKhoan
+            // 
+            this.txtTaiKhoan.Location = new System.Drawing.Point(610, 159);
+            this.txtTaiKhoan.Name = "txtTaiKhoan";
+            this.txtTaiKhoan.Properties.Appearance.Font = new System.Drawing.Font("Times New Roman", 11F);
+            this.txtTaiKhoan.Properties.Appearance.Options.UseFont = true;
+            this.txtTaiKhoan.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Flat;
+            this.txtTaiKhoan.Size = new System.Drawing.Size(219, 26);
+            this.txtTaiKhoan.TabIndex = 21;
+            this.txtTaiKhoan.Visible = false;
+            // 
+            // lblTaiKhoan
+            // 
+            this.lblTaiKhoan.AutoSize = true;
+            this.lblTaiKhoan.Location = new System.Drawing.Point(518, 163);
+            this.lblTaiKhoan.Name = "lblTaiKhoan";
+            this.lblTaiKhoan.Size = new System.Drawing.Size(73, 17);
+            this.lblTaiKhoan.TabIndex = 28;
+            this.lblTaiKhoan.Text = "Tài khoản :";
+            this.lblTaiKhoan.Visible = false;
             // 
             // cbxGioiTinh
             // 
@@ -214,6 +235,7 @@
             this.dateNgaySinh.EditValue = null;
             this.dateNgaySinh.Location = new System.Drawing.Point(189, 91);
             this.dateNgaySinh.Name = "dateNgaySinh";
+            this.dateNgaySinh.Properties.AllowNullInput = DevExpress.Utils.DefaultBoolean.False;
             this.dateNgaySinh.Properties.Appearance.Font = new System.Drawing.Font("Times New Roman", 11F);
             this.dateNgaySinh.Properties.Appearance.Options.UseFont = true;
             this.dateNgaySinh.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Flat;
@@ -517,27 +539,6 @@
             // 
             this.imgList.ImageStream = ((DevExpress.Utils.ImageCollectionStreamer)(resources.GetObject("imgList.ImageStream")));
             // 
-            // txtTaiKhoan
-            // 
-            this.txtTaiKhoan.Location = new System.Drawing.Point(610, 159);
-            this.txtTaiKhoan.Name = "txtTaiKhoan";
-            this.txtTaiKhoan.Properties.Appearance.Font = new System.Drawing.Font("Times New Roman", 11F);
-            this.txtTaiKhoan.Properties.Appearance.Options.UseFont = true;
-            this.txtTaiKhoan.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Flat;
-            this.txtTaiKhoan.Size = new System.Drawing.Size(219, 26);
-            this.txtTaiKhoan.TabIndex = 21;
-            this.txtTaiKhoan.Visible = false;
-            // 
-            // lblTaiKhoan
-            // 
-            this.lblTaiKhoan.AutoSize = true;
-            this.lblTaiKhoan.Location = new System.Drawing.Point(518, 163);
-            this.lblTaiKhoan.Name = "lblTaiKhoan";
-            this.lblTaiKhoan.Size = new System.Drawing.Size(73, 17);
-            this.lblTaiKhoan.TabIndex = 28;
-            this.lblTaiKhoan.Text = "Tài khoản :";
-            this.lblTaiKhoan.Visible = false;
-            // 
             // ucDanhSachNhanVien
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -550,6 +551,7 @@
             this.panel4.ResumeLayout(false);
             this.panelThongTin.ResumeLayout(false);
             this.panelThongTin.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.txtTaiKhoan.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.cbxGioiTinh.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.cbxChucVu.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtQueQuan.Properties)).EndInit();
@@ -569,7 +571,6 @@
             this.panelTimKiem.PerformLayout();
             this.panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.imgList)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtTaiKhoan.Properties)).EndInit();
             this.ResumeLayout(false);
 
         }

@@ -99,6 +99,7 @@ namespace BookShop.GUI
                 txtSDT.Text = nhanvien.SDT;
                 txtEmail.Text = nhanvien.EMAIL;
                 txtQueQuan.Text = nhanvien.QUEQUAN;
+                txtTaiKhoan.Text = nhanvien.TAIKHOAN;
 
                 cbxChucVu.SelectedIndex = (int)nhanvien.CHUCVU;
                 cbxGioiTinh.SelectedIndex = (int)nhanvien.GIOITINH;
@@ -169,7 +170,8 @@ namespace BookShop.GUI
                 return false;
             }
 
-            int cnt = db.NHANVIENs.Where(p => p.TAIKHOAN == txtTaiKhoan.Text).ToList().Count;
+            NHANVIEN k = getNhanVienByID();
+            int cnt = db.NHANVIENs.Where(p => p.TAIKHOAN == txtTaiKhoan.Text && p.ID != k.ID).ToList().Count;
             if (cnt > 0)
             {
                 MessageBox.Show("Tài khoản đã được sử dụng", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
