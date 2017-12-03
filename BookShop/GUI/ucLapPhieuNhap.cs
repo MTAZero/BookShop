@@ -16,5 +16,11 @@ namespace BookShop.GUI
         {
             InitializeComponent();
         }
+
+        private void btnThem_Click(object sender, EventArgs e)
+        {
+            FrmThemChiTietNhap form = new FrmThemChiTietNhap();
+            form.ShowDialog();
+        }
     }
 }

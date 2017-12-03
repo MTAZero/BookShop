@@ -60,5 +60,17 @@ namespace BookShop
 
         #endregion
 
+        public static string TenSanPham(MATHANG a)
+        {
+            string ans = "";
+
+            if (a.LOAISP == 0) return db.SACHes.Where(p => p.ID == a.SACHID).FirstOrDefault().TEN;
+            if (a.LOAISP == 1) return db.VANPHONGPHAMs.Where(p => p.ID == a.VANPHONGPHAMID).FirstOrDefault().TEN;
+
+            return ans;
+        }
+
+        public static int IDSanPham = 0; // sản phẩm lựa chọn
+
     }
 }

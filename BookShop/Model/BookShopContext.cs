@@ -15,7 +15,6 @@ namespace BookShop.Model
         public virtual DbSet<CHITIETHOADON> CHITIETHOADONs { get; set; }
         public virtual DbSet<CHITIETNHAP> CHITIETNHAPs { get; set; }
         public virtual DbSet<HOADONBAN> HOADONBANs { get; set; }
-        public virtual DbSet<KHO> KHOes { get; set; }
         public virtual DbSet<MATHANG> MATHANGs { get; set; }
         public virtual DbSet<NHANVIEN> NHANVIENs { get; set; }
         public virtual DbSet<NXB> NXBs { get; set; }

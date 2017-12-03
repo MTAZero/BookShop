@@ -51,18 +51,19 @@
             this.barButtonItem3 = new DevExpress.XtraBars.BarButtonItem();
             this.barThongTinCaNhan = new DevExpress.XtraBars.BarButtonItem();
             this.barDoiMatKhau = new DevExpress.XtraBars.BarButtonItem();
+            this.barLapPhieuNhap = new DevExpress.XtraBars.BarButtonItem();
+            this.barLapPhieuXuat = new DevExpress.XtraBars.BarButtonItem();
+            this.barKho = new DevExpress.XtraBars.BarButtonItem();
             this.ribbonPage1 = new DevExpress.XtraBars.Ribbon.RibbonPage();
-            this.ribbonPageGroup1 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonPageGroup4 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonPageGroup6 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonPage2 = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.ribbonPageGroup2 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonPageGroup3 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
+            this.ribbonPageGroup1 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.defaultLookAndFeel1 = new DevExpress.LookAndFeel.DefaultLookAndFeel(this.components);
             this.ribbonPageGroup5 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.label1 = new System.Windows.Forms.Label();
-            this.barLapPhieuNhap = new DevExpress.XtraBars.BarButtonItem();
-            this.barLapPhieuXuat = new DevExpress.XtraBars.BarButtonItem();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ribbonControl1)).BeginInit();
             this.SuspendLayout();
@@ -110,9 +111,10 @@
             this.barThongTinCaNhan,
             this.barDoiMatKhau,
             this.barLapPhieuNhap,
-            this.barLapPhieuXuat});
+            this.barLapPhieuXuat,
+            this.barKho});
             this.ribbonControl1.Location = new System.Drawing.Point(0, 0);
-            this.ribbonControl1.MaxItemId = 22;
+            this.ribbonControl1.MaxItemId = 23;
             this.ribbonControl1.Name = "ribbonControl1";
             this.ribbonControl1.Pages.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPage[] {
             this.ribbonPage1,
@@ -271,6 +273,32 @@
             this.barDoiMatKhau.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large;
             this.barDoiMatKhau.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barDoiMatKhau_ItemClick);
             // 
+            // barLapPhieuNhap
+            // 
+            this.barLapPhieuNhap.Caption = "Lập phiếu nhập";
+            this.barLapPhieuNhap.Glyph = ((System.Drawing.Image)(resources.GetObject("barLapPhieuNhap.Glyph")));
+            this.barLapPhieuNhap.Id = 20;
+            this.barLapPhieuNhap.Name = "barLapPhieuNhap";
+            this.barLapPhieuNhap.RibbonStyle = ((DevExpress.XtraBars.Ribbon.RibbonItemStyles)(((DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large | DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithText) 
+            | DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithoutText)));
+            this.barLapPhieuNhap.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barLapPhieuNhap_ItemClick);
+            // 
+            // barLapPhieuXuat
+            // 
+            this.barLapPhieuXuat.Caption = "Lập phiếu xuất";
+            this.barLapPhieuXuat.Glyph = ((System.Drawing.Image)(resources.GetObject("barLapPhieuXuat.Glyph")));
+            this.barLapPhieuXuat.Id = 21;
+            this.barLapPhieuXuat.Name = "barLapPhieuXuat";
+            this.barLapPhieuXuat.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large;
+            // 
+            // barKho
+            // 
+            this.barKho.Caption = "Kho";
+            this.barKho.Glyph = ((System.Drawing.Image)(resources.GetObject("barKho.Glyph")));
+            this.barKho.Id = 22;
+            this.barKho.Name = "barKho";
+            this.barKho.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large;
+            // 
             // ribbonPage1
             // 
             this.ribbonPage1.Groups.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageGroup[] {
@@ -279,19 +307,12 @@
             this.ribbonPage1.Name = "ribbonPage1";
             this.ribbonPage1.Text = "Nhân viên";
             // 
-            // ribbonPageGroup1
-            // 
-            this.ribbonPageGroup1.ItemLinks.Add(this.barNhapHang);
-            this.ribbonPageGroup1.ItemLinks.Add(this.barBanHang);
-            this.ribbonPageGroup1.ItemLinks.Add(this.barThongKeBanHang);
-            this.ribbonPageGroup1.Name = "ribbonPageGroup1";
-            this.ribbonPageGroup1.Text = "Thống kê";
-            // 
             // ribbonPageGroup4
             // 
             this.ribbonPageGroup4.ItemLinks.Add(this.barTimKiemSach);
             this.ribbonPageGroup4.ItemLinks.Add(this.barLapPhieuNhap);
             this.ribbonPageGroup4.ItemLinks.Add(this.barLapPhieuXuat);
+            this.ribbonPageGroup4.ItemLinks.Add(this.barKho);
             this.ribbonPageGroup4.Name = "ribbonPageGroup4";
             this.ribbonPageGroup4.Text = "Hỗ trợ";
             // 
@@ -327,6 +348,14 @@
             this.ribbonPageGroup3.Name = "ribbonPageGroup3";
             this.ribbonPageGroup3.Text = "Sản phẩm";
             // 
+            // ribbonPageGroup1
+            // 
+            this.ribbonPageGroup1.ItemLinks.Add(this.barNhapHang);
+            this.ribbonPageGroup1.ItemLinks.Add(this.barBanHang);
+            this.ribbonPageGroup1.ItemLinks.Add(this.barThongKeBanHang);
+            this.ribbonPageGroup1.Name = "ribbonPageGroup1";
+            this.ribbonPageGroup1.Text = "Thống kê";
+            // 
             // defaultLookAndFeel1
             // 
             this.defaultLookAndFeel1.LookAndFeel.SkinName = "Visual Studio 2013 Light";
@@ -346,23 +375,6 @@
             this.label1.Size = new System.Drawing.Size(141, 16);
             this.label1.TabIndex = 3;
             this.label1.Text = "QUẢN LÝ NHÀ SÁCH";
-            // 
-            // barLapPhieuNhap
-            // 
-            this.barLapPhieuNhap.Caption = "Lập phiếu nhập";
-            this.barLapPhieuNhap.Glyph = ((System.Drawing.Image)(resources.GetObject("barLapPhieuNhap.Glyph")));
-            this.barLapPhieuNhap.Id = 20;
-            this.barLapPhieuNhap.Name = "barLapPhieuNhap";
-            this.barLapPhieuNhap.RibbonStyle = ((DevExpress.XtraBars.Ribbon.RibbonItemStyles)(((DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large | DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithText) 
-            | DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithoutText)));
-            // 
-            // barLapPhieuXuat
-            // 
-            this.barLapPhieuXuat.Caption = "Lập phiếu xuất";
-            this.barLapPhieuXuat.Glyph = ((System.Drawing.Image)(resources.GetObject("barLapPhieuXuat.Glyph")));
-            this.barLapPhieuXuat.Id = 21;
-            this.barLapPhieuXuat.Name = "barLapPhieuXuat";
-            this.barLapPhieuXuat.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large;
             // 
             // FrmMain
             // 
@@ -420,5 +432,6 @@
         private System.Windows.Forms.Label label1;
         private DevExpress.XtraBars.BarButtonItem barLapPhieuNhap;
         private DevExpress.XtraBars.BarButtonItem barLapPhieuXuat;
+        private DevExpress.XtraBars.BarButtonItem barKho;
     }
 }

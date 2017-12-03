@@ -14,7 +14,6 @@ namespace BookShop.Model
         {
             CHITIETHOADONs = new HashSet<CHITIETHOADON>();
             CHITIETNHAPs = new HashSet<CHITIETNHAP>();
-            KHOes = new HashSet<KHO>();
         }
 
         public int ID { get; set; }
@@ -25,6 +24,8 @@ namespace BookShop.Model
 
         public int? VANPHONGPHAMID { get; set; }
 
+        public int? SOLUONG { get; set; }
+
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<CHITIETHOADON> CHITIETHOADONs { get; set; }
 
@@ -32,7 +33,6 @@ namespace BookShop.Model
         public virtual ICollection<CHITIETNHAP> CHITIETNHAPs { get; set; }
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<KHO> KHOes { get; set; }
 
         public virtual SACH SACH { get; set; }
 

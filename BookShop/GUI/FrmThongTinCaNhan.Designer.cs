@@ -30,11 +30,10 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmThongTinCaNhan));
             this.panel1 = new System.Windows.Forms.Panel();
-            this.panel5 = new System.Windows.Forms.Panel();
-            this.txtTitleChucVu = new System.Windows.Forms.Label();
-            this.txtTitleTen = new System.Windows.Forms.Label();
-            this.imgAnh = new System.Windows.Forms.PictureBox();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.cbxGioiTinh = new DevExpress.XtraEditors.ComboBoxEdit();
+            this.cbxChucVu = new DevExpress.XtraEditors.ComboBoxEdit();
+            this.dateNgaySinh = new DevExpress.XtraEditors.DateEdit();
             this.btnDong = new DevExpress.XtraEditors.SimpleButton();
             this.btnCapNhat = new DevExpress.XtraEditors.SimpleButton();
             this.txtQueQuan = new DevExpress.XtraEditors.MemoEdit();
@@ -48,21 +47,22 @@
             this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.cbxGioiTinh = new DevExpress.XtraEditors.ComboBoxEdit();
-            this.cbxChucVu = new DevExpress.XtraEditors.ComboBoxEdit();
-            this.dateNgaySinh = new DevExpress.XtraEditors.DateEdit();
+            this.panel5 = new System.Windows.Forms.Panel();
+            this.imgAnh = new System.Windows.Forms.PictureBox();
+            this.txtTitleChucVu = new System.Windows.Forms.Label();
+            this.txtTitleTen = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
-            this.panel5.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.imgAnh)).BeginInit();
             this.panel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.txtQueQuan.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtEmail.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtSDT.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtHoTen.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cbxGioiTinh.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cbxChucVu.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dateNgaySinh.Properties.CalendarTimeProperties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dateNgaySinh.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtQueQuan.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtEmail.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtSDT.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtHoTen.Properties)).BeginInit();
+            this.panel5.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.imgAnh)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -76,53 +76,6 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(948, 629);
             this.panel1.TabIndex = 0;
-            // 
-            // panel5
-            // 
-            this.panel5.BackColor = System.Drawing.Color.LightGray;
-            this.panel5.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel5.Controls.Add(this.imgAnh);
-            this.panel5.Controls.Add(this.txtTitleChucVu);
-            this.panel5.Controls.Add(this.txtTitleTen);
-            this.panel5.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel5.Location = new System.Drawing.Point(0, 0);
-            this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(946, 171);
-            this.panel5.TabIndex = 1;
-            // 
-            // txtTitleChucVu
-            // 
-            this.txtTitleChucVu.AutoSize = true;
-            this.txtTitleChucVu.ForeColor = System.Drawing.Color.Black;
-            this.txtTitleChucVu.Location = new System.Drawing.Point(158, 102);
-            this.txtTitleChucVu.Name = "txtTitleChucVu";
-            this.txtTitleChucVu.Size = new System.Drawing.Size(84, 17);
-            this.txtTitleChucVu.TabIndex = 2;
-            this.txtTitleChucVu.Text = "Quản trị viên";
-            // 
-            // txtTitleTen
-            // 
-            this.txtTitleTen.AutoSize = true;
-            this.txtTitleTen.Font = new System.Drawing.Font("Sitka Text", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtTitleTen.ForeColor = System.Drawing.Color.Black;
-            this.txtTitleTen.Location = new System.Drawing.Point(154, 51);
-            this.txtTitleTen.Name = "txtTitleTen";
-            this.txtTitleTen.Size = new System.Drawing.Size(238, 39);
-            this.txtTitleTen.TabIndex = 1;
-            this.txtTitleTen.Text = "Phạm Thị Quỳnh";
-            // 
-            // imgAnh
-            // 
-            this.imgAnh.BackColor = System.Drawing.Color.White;
-            this.imgAnh.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.imgAnh.Location = new System.Drawing.Point(12, 3);
-            this.imgAnh.Name = "imgAnh";
-            this.imgAnh.Size = new System.Drawing.Size(120, 160);
-            this.imgAnh.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.imgAnh.TabIndex = 3;
-            this.imgAnh.TabStop = false;
-            this.imgAnh.WaitOnLoad = true;
-            this.imgAnh.Click += new System.EventHandler(this.imgAnh_Click);
             // 
             // panel2
             // 
@@ -147,6 +100,64 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(946, 456);
             this.panel2.TabIndex = 2;
+            // 
+            // cbxGioiTinh
+            // 
+            this.cbxGioiTinh.Location = new System.Drawing.Point(646, 89);
+            this.cbxGioiTinh.Name = "cbxGioiTinh";
+            this.cbxGioiTinh.Properties.Appearance.Font = new System.Drawing.Font("Times New Roman", 11F);
+            this.cbxGioiTinh.Properties.Appearance.Options.UseFont = true;
+            this.cbxGioiTinh.Properties.AppearanceDropDown.Font = new System.Drawing.Font("Times New Roman", 11F);
+            this.cbxGioiTinh.Properties.AppearanceDropDown.Options.UseFont = true;
+            this.cbxGioiTinh.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Flat;
+            this.cbxGioiTinh.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.cbxGioiTinh.Properties.ButtonsStyle = DevExpress.XtraEditors.Controls.BorderStyles.Flat;
+            this.cbxGioiTinh.Properties.Items.AddRange(new object[] {
+            "Nữ",
+            "Nam"});
+            this.cbxGioiTinh.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
+            this.cbxGioiTinh.Size = new System.Drawing.Size(219, 26);
+            this.cbxGioiTinh.TabIndex = 50;
+            // 
+            // cbxChucVu
+            // 
+            this.cbxChucVu.Enabled = false;
+            this.cbxChucVu.Location = new System.Drawing.Point(646, 21);
+            this.cbxChucVu.Name = "cbxChucVu";
+            this.cbxChucVu.Properties.Appearance.Font = new System.Drawing.Font("Times New Roman", 11F);
+            this.cbxChucVu.Properties.Appearance.Options.UseFont = true;
+            this.cbxChucVu.Properties.AppearanceDropDown.Font = new System.Drawing.Font("Times New Roman", 11F);
+            this.cbxChucVu.Properties.AppearanceDropDown.Options.UseFont = true;
+            this.cbxChucVu.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Flat;
+            this.cbxChucVu.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.cbxChucVu.Properties.ButtonsStyle = DevExpress.XtraEditors.Controls.BorderStyles.Flat;
+            this.cbxChucVu.Properties.Items.AddRange(new object[] {
+            "Nhân viên",
+            "Quản trị viên"});
+            this.cbxChucVu.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
+            this.cbxChucVu.Size = new System.Drawing.Size(219, 26);
+            this.cbxChucVu.TabIndex = 48;
+            // 
+            // dateNgaySinh
+            // 
+            this.dateNgaySinh.EditValue = null;
+            this.dateNgaySinh.Location = new System.Drawing.Point(224, 89);
+            this.dateNgaySinh.Name = "dateNgaySinh";
+            this.dateNgaySinh.Properties.AllowNullInput = DevExpress.Utils.DefaultBoolean.False;
+            this.dateNgaySinh.Properties.Appearance.Font = new System.Drawing.Font("Times New Roman", 11F);
+            this.dateNgaySinh.Properties.Appearance.Options.UseFont = true;
+            this.dateNgaySinh.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Flat;
+            this.dateNgaySinh.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.dateNgaySinh.Properties.ButtonsStyle = DevExpress.XtraEditors.Controls.BorderStyles.Flat;
+            this.dateNgaySinh.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.dateNgaySinh.Properties.Mask.EditMask = "dd/MM/yyyy";
+            this.dateNgaySinh.Properties.Mask.UseMaskAsDisplayFormat = true;
+            this.dateNgaySinh.Size = new System.Drawing.Size(157, 26);
+            this.dateNgaySinh.TabIndex = 49;
             // 
             // btnDong
             // 
@@ -277,62 +288,52 @@
             this.label4.TabIndex = 33;
             this.label4.Text = "Họ và tên :";
             // 
-            // cbxGioiTinh
+            // panel5
             // 
-            this.cbxGioiTinh.Location = new System.Drawing.Point(646, 89);
-            this.cbxGioiTinh.Name = "cbxGioiTinh";
-            this.cbxGioiTinh.Properties.Appearance.Font = new System.Drawing.Font("Times New Roman", 11F);
-            this.cbxGioiTinh.Properties.Appearance.Options.UseFont = true;
-            this.cbxGioiTinh.Properties.AppearanceDropDown.Font = new System.Drawing.Font("Times New Roman", 11F);
-            this.cbxGioiTinh.Properties.AppearanceDropDown.Options.UseFont = true;
-            this.cbxGioiTinh.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Flat;
-            this.cbxGioiTinh.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.cbxGioiTinh.Properties.ButtonsStyle = DevExpress.XtraEditors.Controls.BorderStyles.Flat;
-            this.cbxGioiTinh.Properties.Items.AddRange(new object[] {
-            "Nữ",
-            "Nam"});
-            this.cbxGioiTinh.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
-            this.cbxGioiTinh.Size = new System.Drawing.Size(219, 26);
-            this.cbxGioiTinh.TabIndex = 50;
+            this.panel5.BackColor = System.Drawing.Color.LightGray;
+            this.panel5.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel5.Controls.Add(this.imgAnh);
+            this.panel5.Controls.Add(this.txtTitleChucVu);
+            this.panel5.Controls.Add(this.txtTitleTen);
+            this.panel5.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel5.Location = new System.Drawing.Point(0, 0);
+            this.panel5.Name = "panel5";
+            this.panel5.Size = new System.Drawing.Size(946, 171);
+            this.panel5.TabIndex = 1;
             // 
-            // cbxChucVu
+            // imgAnh
             // 
-            this.cbxChucVu.Location = new System.Drawing.Point(646, 21);
-            this.cbxChucVu.Name = "cbxChucVu";
-            this.cbxChucVu.Properties.Appearance.Font = new System.Drawing.Font("Times New Roman", 11F);
-            this.cbxChucVu.Properties.Appearance.Options.UseFont = true;
-            this.cbxChucVu.Properties.AppearanceDropDown.Font = new System.Drawing.Font("Times New Roman", 11F);
-            this.cbxChucVu.Properties.AppearanceDropDown.Options.UseFont = true;
-            this.cbxChucVu.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Flat;
-            this.cbxChucVu.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.cbxChucVu.Properties.ButtonsStyle = DevExpress.XtraEditors.Controls.BorderStyles.Flat;
-            this.cbxChucVu.Properties.Items.AddRange(new object[] {
-            "Nhân viên",
-            "Quản trị viên"});
-            this.cbxChucVu.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
-            this.cbxChucVu.Size = new System.Drawing.Size(219, 26);
-            this.cbxChucVu.TabIndex = 48;
+            this.imgAnh.BackColor = System.Drawing.Color.White;
+            this.imgAnh.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.imgAnh.Location = new System.Drawing.Point(12, 3);
+            this.imgAnh.Name = "imgAnh";
+            this.imgAnh.Size = new System.Drawing.Size(120, 160);
+            this.imgAnh.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.imgAnh.TabIndex = 3;
+            this.imgAnh.TabStop = false;
+            this.imgAnh.WaitOnLoad = true;
+            this.imgAnh.Click += new System.EventHandler(this.imgAnh_Click);
             // 
-            // dateNgaySinh
+            // txtTitleChucVu
             // 
-            this.dateNgaySinh.EditValue = null;
-            this.dateNgaySinh.Location = new System.Drawing.Point(224, 89);
-            this.dateNgaySinh.Name = "dateNgaySinh";
-            this.dateNgaySinh.Properties.AllowNullInput = DevExpress.Utils.DefaultBoolean.False;
-            this.dateNgaySinh.Properties.Appearance.Font = new System.Drawing.Font("Times New Roman", 11F);
-            this.dateNgaySinh.Properties.Appearance.Options.UseFont = true;
-            this.dateNgaySinh.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Flat;
-            this.dateNgaySinh.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.dateNgaySinh.Properties.ButtonsStyle = DevExpress.XtraEditors.Controls.BorderStyles.Flat;
-            this.dateNgaySinh.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.dateNgaySinh.Properties.Mask.EditMask = "dd/MM/yyyy";
-            this.dateNgaySinh.Properties.Mask.UseMaskAsDisplayFormat = true;
-            this.dateNgaySinh.Size = new System.Drawing.Size(157, 26);
-            this.dateNgaySinh.TabIndex = 49;
+            this.txtTitleChucVu.AutoSize = true;
+            this.txtTitleChucVu.ForeColor = System.Drawing.Color.Black;
+            this.txtTitleChucVu.Location = new System.Drawing.Point(158, 102);
+            this.txtTitleChucVu.Name = "txtTitleChucVu";
+            this.txtTitleChucVu.Size = new System.Drawing.Size(84, 17);
+            this.txtTitleChucVu.TabIndex = 2;
+            this.txtTitleChucVu.Text = "Quản trị viên";
+            // 
+            // txtTitleTen
+            // 
+            this.txtTitleTen.AutoSize = true;
+            this.txtTitleTen.Font = new System.Drawing.Font("Sitka Text", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtTitleTen.ForeColor = System.Drawing.Color.Black;
+            this.txtTitleTen.Location = new System.Drawing.Point(154, 51);
+            this.txtTitleTen.Name = "txtTitleTen";
+            this.txtTitleTen.Size = new System.Drawing.Size(238, 39);
+            this.txtTitleTen.TabIndex = 1;
+            this.txtTitleTen.Text = "Phạm Thị Quỳnh";
             // 
             // FrmThongTinCaNhan
             // 
@@ -343,23 +344,23 @@
             this.MaximizeBox = false;
             this.Name = "FrmThongTinCaNhan";
             this.Resizable = false;
-            this.Style = MetroFramework.MetroColorStyle.Green;
+            this.Style = MetroFramework.MetroColorStyle.Black;
             this.Text = "THÔNG TIN CÁ NHÂN";
             this.Load += new System.EventHandler(this.FrmThongTinCaNhan_Load);
             this.panel1.ResumeLayout(false);
-            this.panel5.ResumeLayout(false);
-            this.panel5.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.imgAnh)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.txtQueQuan.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtEmail.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtSDT.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtHoTen.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.cbxGioiTinh.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.cbxChucVu.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dateNgaySinh.Properties.CalendarTimeProperties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dateNgaySinh.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtQueQuan.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtEmail.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtSDT.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtHoTen.Properties)).EndInit();
+            this.panel5.ResumeLayout(false);
+            this.panel5.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.imgAnh)).EndInit();
             this.ResumeLayout(false);
 
         }

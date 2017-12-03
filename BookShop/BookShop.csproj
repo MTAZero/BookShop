@@ -91,11 +91,23 @@
     <Compile Include="GUI\FrmLogin.Designer.cs">
       <DependentUpon>FrmLogin.cs</DependentUpon>
     </Compile>
+    <Compile Include="GUI\FrmLuaChonSanPham.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\FrmLuaChonSanPham.Designer.cs">
+      <DependentUpon>FrmLuaChonSanPham.cs</DependentUpon>
+    </Compile>
     <Compile Include="GUI\FrmMain.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="GUI\FrmMain.Designer.cs">
       <DependentUpon>FrmMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\FrmThemChiTietNhap.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\FrmThemChiTietNhap.Designer.cs">
+      <DependentUpon>FrmThemChiTietNhap.cs</DependentUpon>
     </Compile>
     <Compile Include="GUI\FrmThongTinCaNhan.cs">
       <SubType>Form</SubType>
@@ -163,6 +175,12 @@
     <Compile Include="GUI\ucNhapHang.Designer.cs">
       <DependentUpon>ucNhapHang.cs</DependentUpon>
     </Compile>
+    <Compile Include="GUI\ucMatHang.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GUI\ucMatHang.Designer.cs">
+      <DependentUpon>ucMatHang.cs</DependentUpon>
+    </Compile>
     <Compile Include="GUI\ucSach.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -186,7 +204,6 @@
     <Compile Include="Model\CHITIETHOADON.cs" />
     <Compile Include="Model\CHITIETNHAP.cs" />
     <Compile Include="Model\HOADONBAN.cs" />
-    <Compile Include="Model\KHO.cs" />
     <Compile Include="Model\MATHANG.cs" />
     <Compile Include="Model\NHANVIEN.cs" />
     <Compile Include="Model\NXB.cs" />
@@ -203,8 +220,14 @@
     <EmbeddedResource Include="GUI\FrmLogin.resx">
       <DependentUpon>FrmLogin.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="GUI\FrmLuaChonSanPham.resx">
+      <DependentUpon>FrmLuaChonSanPham.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="GUI\FrmMain.resx">
       <DependentUpon>FrmMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\FrmThemChiTietNhap.resx">
+      <DependentUpon>FrmThemChiTietNhap.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\FrmThongTinCaNhan.resx">
       <DependentUpon>FrmThongTinCaNhan.cs</DependentUpon>
@@ -233,8 +256,14 @@
     <EmbeddedResource Include="GUI\ucLapPhieuNhap.resx">
       <DependentUpon>ucLapPhieuNhap.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="GUI\ucLapPhieuXuat.resx">
+      <DependentUpon>ucLapPhieuXuat.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="GUI\ucNhapHang.resx">
       <DependentUpon>ucNhapHang.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\ucMatHang.resx">
+      <DependentUpon>ucMatHang.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\ucSach.resx">
       <DependentUpon>ucSach.cs</DependentUpon>

@@ -107,8 +107,14 @@ namespace BookShop.GUI
             panelMain.Controls.Add(uc);
         }
 
+        private void barLapPhieuNhap_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            panelMain.Controls.Clear();
+            ucLapPhieuNhap uc = new ucLapPhieuNhap();
+            uc.Dock = DockStyle.Fill;
+            panelMain.Controls.Add(uc);
+        }
 
-        
 
         private void barThongTinCaNhan_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
@@ -122,8 +128,9 @@ namespace BookShop.GUI
             form.ShowDialog();
         }
 
+
         #endregion
 
-
+        
     }
 }
