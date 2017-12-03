@@ -145,6 +145,18 @@
     <Compile Include="GUI\ucBanHang.Designer.cs">
       <DependentUpon>ucBanHang.cs</DependentUpon>
     </Compile>
+    <Compile Include="GUI\ucLapPhieuNhap.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GUI\ucLapPhieuNhap.Designer.cs">
+      <DependentUpon>ucLapPhieuNhap.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\ucLapPhieuXuat.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GUI\ucLapPhieuXuat.Designer.cs">
+      <DependentUpon>ucLapPhieuXuat.cs</DependentUpon>
+    </Compile>
     <Compile Include="GUI\ucNhapHang.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -217,6 +229,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\ucBanHang.resx">
       <DependentUpon>ucBanHang.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\ucLapPhieuNhap.resx">
+      <DependentUpon>ucLapPhieuNhap.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\ucNhapHang.resx">
       <DependentUpon>ucNhapHang.cs</DependentUpon>

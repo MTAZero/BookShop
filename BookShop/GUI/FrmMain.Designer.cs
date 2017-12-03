@@ -61,6 +61,8 @@
             this.defaultLookAndFeel1 = new DevExpress.LookAndFeel.DefaultLookAndFeel(this.components);
             this.ribbonPageGroup5 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.label1 = new System.Windows.Forms.Label();
+            this.barLapPhieuNhap = new DevExpress.XtraBars.BarButtonItem();
+            this.barLapPhieuXuat = new DevExpress.XtraBars.BarButtonItem();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ribbonControl1)).BeginInit();
             this.SuspendLayout();
@@ -106,9 +108,11 @@
             this.barButtonItem2,
             this.barButtonItem3,
             this.barThongTinCaNhan,
-            this.barDoiMatKhau});
+            this.barDoiMatKhau,
+            this.barLapPhieuNhap,
+            this.barLapPhieuXuat});
             this.ribbonControl1.Location = new System.Drawing.Point(0, 0);
-            this.ribbonControl1.MaxItemId = 20;
+            this.ribbonControl1.MaxItemId = 22;
             this.ribbonControl1.Name = "ribbonControl1";
             this.ribbonControl1.Pages.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPage[] {
             this.ribbonPage1,
@@ -171,7 +175,7 @@
             // 
             // barNhapHang
             // 
-            this.barNhapHang.Caption = "Nhập hàng";
+            this.barNhapHang.Caption = "Danh sách phiếu nhập";
             this.barNhapHang.Glyph = ((System.Drawing.Image)(resources.GetObject("barNhapHang.Glyph")));
             this.barNhapHang.Id = 7;
             this.barNhapHang.Name = "barNhapHang";
@@ -180,7 +184,7 @@
             // 
             // barBanHang
             // 
-            this.barBanHang.Caption = "Bán hàng";
+            this.barBanHang.Caption = "Danh sách phiếu xuất";
             this.barBanHang.Glyph = ((System.Drawing.Image)(resources.GetObject("barBanHang.Glyph")));
             this.barBanHang.Id = 8;
             this.barBanHang.Name = "barBanHang";
@@ -270,7 +274,6 @@
             // ribbonPage1
             // 
             this.ribbonPage1.Groups.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageGroup[] {
-            this.ribbonPageGroup1,
             this.ribbonPageGroup4,
             this.ribbonPageGroup6});
             this.ribbonPage1.Name = "ribbonPage1";
@@ -280,13 +283,15 @@
             // 
             this.ribbonPageGroup1.ItemLinks.Add(this.barNhapHang);
             this.ribbonPageGroup1.ItemLinks.Add(this.barBanHang);
+            this.ribbonPageGroup1.ItemLinks.Add(this.barThongKeBanHang);
             this.ribbonPageGroup1.Name = "ribbonPageGroup1";
-            this.ribbonPageGroup1.Text = "Nhập xuất hàng";
+            this.ribbonPageGroup1.Text = "Thống kê";
             // 
             // ribbonPageGroup4
             // 
-            this.ribbonPageGroup4.ItemLinks.Add(this.barThongKeBanHang);
             this.ribbonPageGroup4.ItemLinks.Add(this.barTimKiemSach);
+            this.ribbonPageGroup4.ItemLinks.Add(this.barLapPhieuNhap);
+            this.ribbonPageGroup4.ItemLinks.Add(this.barLapPhieuXuat);
             this.ribbonPageGroup4.Name = "ribbonPageGroup4";
             this.ribbonPageGroup4.Text = "Hỗ trợ";
             // 
@@ -301,7 +306,8 @@
             // 
             this.ribbonPage2.Groups.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageGroup[] {
             this.ribbonPageGroup2,
-            this.ribbonPageGroup3});
+            this.ribbonPageGroup3,
+            this.ribbonPageGroup1});
             this.ribbonPage2.Name = "ribbonPage2";
             this.ribbonPage2.Text = "Quản trị";
             // 
@@ -340,6 +346,23 @@
             this.label1.Size = new System.Drawing.Size(141, 16);
             this.label1.TabIndex = 3;
             this.label1.Text = "QUẢN LÝ NHÀ SÁCH";
+            // 
+            // barLapPhieuNhap
+            // 
+            this.barLapPhieuNhap.Caption = "Lập phiếu nhập";
+            this.barLapPhieuNhap.Glyph = ((System.Drawing.Image)(resources.GetObject("barLapPhieuNhap.Glyph")));
+            this.barLapPhieuNhap.Id = 20;
+            this.barLapPhieuNhap.Name = "barLapPhieuNhap";
+            this.barLapPhieuNhap.RibbonStyle = ((DevExpress.XtraBars.Ribbon.RibbonItemStyles)(((DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large | DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithText) 
+            | DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithoutText)));
+            // 
+            // barLapPhieuXuat
+            // 
+            this.barLapPhieuXuat.Caption = "Lập phiếu xuất";
+            this.barLapPhieuXuat.Glyph = ((System.Drawing.Image)(resources.GetObject("barLapPhieuXuat.Glyph")));
+            this.barLapPhieuXuat.Id = 21;
+            this.barLapPhieuXuat.Name = "barLapPhieuXuat";
+            this.barLapPhieuXuat.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large;
             // 
             // FrmMain
             // 
@@ -395,5 +418,7 @@
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup6;
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup5;
         private System.Windows.Forms.Label label1;
+        private DevExpress.XtraBars.BarButtonItem barLapPhieuNhap;
+        private DevExpress.XtraBars.BarButtonItem barLapPhieuXuat;
     }
 }
