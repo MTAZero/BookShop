@@ -35,8 +35,6 @@
             this.panelThongTin = new System.Windows.Forms.Panel();
             this.txtTaiKhoan = new DevExpress.XtraEditors.TextEdit();
             this.lblTaiKhoan = new System.Windows.Forms.Label();
-            this.cbxGioiTinh = new DevExpress.XtraEditors.ComboBoxEdit();
-            this.cbxChucVu = new DevExpress.XtraEditors.ComboBoxEdit();
             this.txtQueQuan = new DevExpress.XtraEditors.MemoEdit();
             this.txtEmail = new DevExpress.XtraEditors.TextEdit();
             this.txtSDT = new DevExpress.XtraEditors.TextEdit();
@@ -68,11 +66,11 @@
             this.btnSua = new DevExpress.XtraEditors.SimpleButton();
             this.btnThem = new DevExpress.XtraEditors.SimpleButton();
             this.imgList = new DevExpress.Utils.ImageCollection(this.components);
+            this.cbxChucVu = new DevExpress.XtraEditors.ComboBoxEdit();
+            this.cbxGioiTinh = new DevExpress.XtraEditors.ComboBoxEdit();
             this.panel4.SuspendLayout();
             this.panelThongTin.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.txtTaiKhoan.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.cbxGioiTinh.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.cbxChucVu.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtQueQuan.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtEmail.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtSDT.Properties)).BeginInit();
@@ -88,6 +86,8 @@
             this.panelTimKiem.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.imgList)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cbxChucVu.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cbxGioiTinh.Properties)).BeginInit();
             this.SuspendLayout();
             // 
             // defaultLookAndFeel1
@@ -151,44 +151,6 @@
             this.lblTaiKhoan.TabIndex = 28;
             this.lblTaiKhoan.Text = "Tài khoản :";
             this.lblTaiKhoan.Visible = false;
-            // 
-            // cbxGioiTinh
-            // 
-            this.cbxGioiTinh.Location = new System.Drawing.Point(610, 92);
-            this.cbxGioiTinh.Name = "cbxGioiTinh";
-            this.cbxGioiTinh.Properties.Appearance.Font = new System.Drawing.Font("Times New Roman", 11F);
-            this.cbxGioiTinh.Properties.Appearance.Options.UseFont = true;
-            this.cbxGioiTinh.Properties.AppearanceDropDown.Font = new System.Drawing.Font("Times New Roman", 11F);
-            this.cbxGioiTinh.Properties.AppearanceDropDown.Options.UseFont = true;
-            this.cbxGioiTinh.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Flat;
-            this.cbxGioiTinh.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.cbxGioiTinh.Properties.ButtonsStyle = DevExpress.XtraEditors.Controls.BorderStyles.Flat;
-            this.cbxGioiTinh.Properties.Items.AddRange(new object[] {
-            "Nữ",
-            "Nam"});
-            this.cbxGioiTinh.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
-            this.cbxGioiTinh.Size = new System.Drawing.Size(219, 26);
-            this.cbxGioiTinh.TabIndex = 19;
-            // 
-            // cbxChucVu
-            // 
-            this.cbxChucVu.Location = new System.Drawing.Point(610, 24);
-            this.cbxChucVu.Name = "cbxChucVu";
-            this.cbxChucVu.Properties.Appearance.Font = new System.Drawing.Font("Times New Roman", 11F);
-            this.cbxChucVu.Properties.Appearance.Options.UseFont = true;
-            this.cbxChucVu.Properties.AppearanceDropDown.Font = new System.Drawing.Font("Times New Roman", 11F);
-            this.cbxChucVu.Properties.AppearanceDropDown.Options.UseFont = true;
-            this.cbxChucVu.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Flat;
-            this.cbxChucVu.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.cbxChucVu.Properties.ButtonsStyle = DevExpress.XtraEditors.Controls.BorderStyles.Flat;
-            this.cbxChucVu.Properties.Items.AddRange(new object[] {
-            "Nhân viên",
-            "Quản trị viên"});
-            this.cbxChucVu.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
-            this.cbxChucVu.Size = new System.Drawing.Size(219, 26);
-            this.cbxChucVu.TabIndex = 17;
             // 
             // txtQueQuan
             // 
@@ -539,6 +501,44 @@
             // 
             this.imgList.ImageStream = ((DevExpress.Utils.ImageCollectionStreamer)(resources.GetObject("imgList.ImageStream")));
             // 
+            // cbxChucVu
+            // 
+            this.cbxChucVu.Location = new System.Drawing.Point(610, 24);
+            this.cbxChucVu.Name = "cbxChucVu";
+            this.cbxChucVu.Properties.Appearance.Font = new System.Drawing.Font("Times New Roman", 11F);
+            this.cbxChucVu.Properties.Appearance.Options.UseFont = true;
+            this.cbxChucVu.Properties.AppearanceDropDown.Font = new System.Drawing.Font("Times New Roman", 11F);
+            this.cbxChucVu.Properties.AppearanceDropDown.Options.UseFont = true;
+            this.cbxChucVu.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Flat;
+            this.cbxChucVu.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.cbxChucVu.Properties.ButtonsStyle = DevExpress.XtraEditors.Controls.BorderStyles.Flat;
+            this.cbxChucVu.Properties.Items.AddRange(new object[] {
+            "Nhân viên",
+            "Quản trị viên"});
+            this.cbxChucVu.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
+            this.cbxChucVu.Size = new System.Drawing.Size(219, 26);
+            this.cbxChucVu.TabIndex = 17;
+            // 
+            // cbxGioiTinh
+            // 
+            this.cbxGioiTinh.Location = new System.Drawing.Point(610, 92);
+            this.cbxGioiTinh.Name = "cbxGioiTinh";
+            this.cbxGioiTinh.Properties.Appearance.Font = new System.Drawing.Font("Times New Roman", 11F);
+            this.cbxGioiTinh.Properties.Appearance.Options.UseFont = true;
+            this.cbxGioiTinh.Properties.AppearanceDropDown.Font = new System.Drawing.Font("Times New Roman", 11F);
+            this.cbxGioiTinh.Properties.AppearanceDropDown.Options.UseFont = true;
+            this.cbxGioiTinh.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Flat;
+            this.cbxGioiTinh.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.cbxGioiTinh.Properties.ButtonsStyle = DevExpress.XtraEditors.Controls.BorderStyles.Flat;
+            this.cbxGioiTinh.Properties.Items.AddRange(new object[] {
+            "Nữ",
+            "Nam"});
+            this.cbxGioiTinh.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
+            this.cbxGioiTinh.Size = new System.Drawing.Size(219, 26);
+            this.cbxGioiTinh.TabIndex = 19;
+            // 
             // ucDanhSachNhanVien
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -552,8 +552,6 @@
             this.panelThongTin.ResumeLayout(false);
             this.panelThongTin.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.txtTaiKhoan.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.cbxGioiTinh.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.cbxChucVu.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtQueQuan.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtEmail.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtSDT.Properties)).EndInit();
@@ -571,6 +569,8 @@
             this.panelTimKiem.PerformLayout();
             this.panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.imgList)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cbxChucVu.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cbxGioiTinh.Properties)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -609,10 +609,10 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label4;
         private DevExpress.Utils.ImageCollection imgList;
-        private DevExpress.XtraEditors.ComboBoxEdit cbxGioiTinh;
-        private DevExpress.XtraEditors.ComboBoxEdit cbxChucVu;
         private DevExpress.XtraGrid.Columns.GridColumn ChucVu;
         private DevExpress.XtraEditors.TextEdit txtTaiKhoan;
         private System.Windows.Forms.Label lblTaiKhoan;
+        private DevExpress.XtraEditors.ComboBoxEdit cbxGioiTinh;
+        private DevExpress.XtraEditors.ComboBoxEdit cbxChucVu;
     }
 }
