@@ -87,7 +87,7 @@
             this.btnThem.Size = new System.Drawing.Size(182, 44);
             this.btnThem.TabIndex = 4;
             this.btnThem.Text = "Thêm";
-            this.btnThem.Click += new System.EventHandler(this.btnThem_Click );
+            this.btnThem.Click += new System.EventHandler(this.btnThem_Click);
             // 
             // btnXoa
             // 
@@ -99,7 +99,7 @@
             this.btnXoa.Size = new System.Drawing.Size(182, 44);
             this.btnXoa.TabIndex = 6;
             this.btnXoa.Text = "Xóa";
-            this.btnXoa.Click += new System.EventHandler(this.btnXoa_Click );
+            this.btnXoa.Click += new System.EventHandler(this.btnXoa_Click);
             // 
             // btnSua
             // 
@@ -111,7 +111,7 @@
             this.btnSua.Size = new System.Drawing.Size(182, 44);
             this.btnSua.TabIndex = 5;
             this.btnSua.Text = "Sửa";
-            this.btnSua.Click += new System.EventHandler(this.btnSua_Click );
+            this.btnSua.Click += new System.EventHandler(this.btnSua_Click);
             // 
             // groupBox2
             // 
@@ -147,7 +147,7 @@
             this.txtTimKiem.Name = "txtTimKiem";
             this.txtTimKiem.Size = new System.Drawing.Size(268, 24);
             this.txtTimKiem.TabIndex = 2;
-            this.txtTimKiem.TextChanged += new System.EventHandler(this.txtTimKiem_TextChanged );
+            this.txtTimKiem.TextChanged += new System.EventHandler(this.txtTimKiem_TextChanged);
             // 
             // label1
             // 
@@ -214,6 +214,7 @@
             // STT
             // 
             this.STT.Caption = "TT";
+            this.STT.FieldName = "STT";
             this.STT.Name = "STT";
             this.STT.Visible = true;
             this.STT.VisibleIndex = 0;
@@ -221,7 +222,8 @@
             // 
             // Ten
             // 
-            this.Ten.Caption = "Thể loại";
+            this.Ten.Caption = "Nhà xuất bản";
+            this.Ten.FieldName = "Ten";
             this.Ten.Name = "Ten";
             this.Ten.Visible = true;
             this.Ten.VisibleIndex = 1;
@@ -234,6 +236,7 @@
             this.Controls.Add(this.panel1);
             this.Name = "ucDanhSachNhaXuatBan";
             this.Size = new System.Drawing.Size(1308, 548);
+            this.Load += new System.EventHandler(this.ucDanhSachNhaXuatBan_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.panel2.ResumeLayout(false);

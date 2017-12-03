@@ -103,6 +103,12 @@
     <Compile Include="GUI\FrmThongTinCaNhan.Designer.cs">
       <DependentUpon>FrmThongTinCaNhan.cs</DependentUpon>
     </Compile>
+    <Compile Include="GUI\ucDanhSachTheLoai.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GUI\ucDanhSachTheLoai.Designer.cs">
+      <DependentUpon>ucDanhSachTheLoai.cs</DependentUpon>
+    </Compile>
     <Compile Include="GUI\ucDanhSachTacGia.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -132,12 +138,6 @@
     </Compile>
     <Compile Include="GUI\ucDanhSachNhanVien.Designer.cs">
       <DependentUpon>ucDanhSachNhanVien.cs</DependentUpon>
-    </Compile>
-    <Compile Include="GUI\ucDanhSachTheLoai.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="GUI\ucDanhSachTheLoai.Designer.cs">
-      <DependentUpon>ucDanhSachTheLoai.cs</DependentUpon>
     </Compile>
     <Compile Include="GUI\ucBanHang.cs">
       <SubType>UserControl</SubType>
@@ -191,6 +191,9 @@
     <EmbeddedResource Include="GUI\FrmThongTinCaNhan.resx">
       <DependentUpon>FrmThongTinCaNhan.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="GUI\ucDanhSachTheLoai.resx">
+      <DependentUpon>ucDanhSachTheLoai.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="GUI\ucDanhSachTacGia.resx">
       <DependentUpon>ucDanhSachTacGia.cs</DependentUpon>
     </EmbeddedResource>
@@ -205,9 +208,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\ucDanhSachNhanVien.resx">
       <DependentUpon>ucDanhSachNhanVien.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="GUI\ucDanhSachTheLoai.resx">
-      <DependentUpon>ucDanhSachTheLoai.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\ucBanHang.resx">
       <DependentUpon>ucBanHang.cs</DependentUpon>

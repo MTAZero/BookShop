@@ -27,24 +27,24 @@ namespace BookShop.GUI
 
         #region Hàm chức năng
 
-        private THELOAI getTHELOAIByID()
+        private NXB getNHAXUATBANByID()
         {
             try
             {
                 int id = (int) dgvNhaXuatBan.GetFocusedRowCellValue("ID");
-                THELOAI ans = db.THELOAIs.Where(p => p.ID == id).FirstOrDefault();
-                if (ans == null) return new THELOAI();
+                NXB ans = db.NXBs.Where(p => p.ID == id).FirstOrDefault();
+                if (ans == null) return new NXB();
                 return ans;
             }
             catch
             {
-                return new THELOAI();
+                return new NXB();
             }
         }
 
-        private THELOAI getTHELOAIByForm()
+        private NXB getNHAXUATBANByForm()
         {
-            THELOAI ans = new THELOAI();
+            NXB ans = new NXB();
 
             ans.TEN = txtTenNXB.Text;
 
@@ -60,7 +60,7 @@ namespace BookShop.GUI
         {
             try
             {
-                THELOAI tg = getTHELOAIByID();
+                NXB tg = getNHAXUATBANByID();
 
                 if (tg.ID == 0) return;
 
@@ -105,10 +105,10 @@ namespace BookShop.GUI
 
         private bool CheckLuaChon()
         {
-            THELOAI tg = getTHELOAIByID();
+            NXB tg = getNHAXUATBANByID();
             if (tg.ID == 0)
             {
-                MessageBox.Show("Chưa có thể loại nào được chọn",
+                MessageBox.Show("Chưa có nhà xuất bản nào được chọn",
                                 "Thông báo",
                                 MessageBoxButtons.OK,
                                 MessageBoxIcon.Error);
@@ -117,7 +117,7 @@ namespace BookShop.GUI
             return true;
         }
 
-        private void CapNhat(ref THELOAI cu, THELOAI moi)
+        private void CapNhat(ref NXB cu, NXB moi)
         {
             cu.TEN = moi.TEN;
         }
@@ -131,18 +131,18 @@ namespace BookShop.GUI
             ClearControl();
         }
 
-        private void LoadDgvNhanVien()
+        private void LoadDgvNXB()
         {
             int i = 0;
             string keyWord = txtTimKiem.Text.Trim().ToUpper();
-            var listTheLoai = db.THELOAIs.ToList()
+            var listNHAXUATBAN = db.NXBs.ToList()
                            .Select(p => new
                            {
                                ID = p.ID,
                                Ten = p.TEN,
                            })
                            .ToList();
-            dgvNhaXuatBanMain.DataSource = listTheLoai.ToList()
+            dgvNhaXuatBanMain.DataSource = listNHAXUATBAN.ToList()
                                          .Where(p => p.Ten.ToUpper().Contains(keyWord))
                                          .Select(p => new
                                          {
@@ -167,10 +167,10 @@ namespace BookShop.GUI
 
         }
 
-        private void ucDanhSachTheLoai_Load(object sender, EventArgs e)
+        private void ucDanhSachNhaXuatBan_Load(object sender, EventArgs e)
         {
             LoadInitControl();
-            LoadDgvNhanVien();
+            LoadDgvNXB();
             LockControl();
         }
         #endregion
@@ -199,25 +199,25 @@ namespace BookShop.GUI
                     btnXoa.Text = "Xóa";
                     LockControl();
 
-                    THELOAI moi = getTHELOAIByForm();
-                    db.THELOAIs.Add(moi);
+                    NXB moi = getNHAXUATBANByForm();
+                    db.NXBs.Add(moi);
 
                     try
                     {
                         db.SaveChanges();
-                        MessageBox.Show("Thêm thông tin thể loại thành công",
+                        MessageBox.Show("Thêm thông tin nhà xuất bản thành công",
                                         "Thông báo",
                                         MessageBoxButtons.OK,
                                         MessageBoxIcon.Information);
                     }
                     catch (Exception ex)
                     {
-                        MessageBox.Show("Thêm thông tin thể loại thất bại\n" + ex.Message,
+                        MessageBox.Show("Thêm thông tin nhà xuất bản thất bại\n" + ex.Message,
                                         "Thông báo",
                                         MessageBoxButtons.OK,
                                         MessageBoxIcon.Error);
                     }
-                    LoadDgvNhanVien();
+                    LoadDgvNXB();
                 }
                 return;
             }
@@ -247,26 +247,26 @@ namespace BookShop.GUI
 
                     LockControl();
 
-                    THELOAI cu = getTHELOAIByID();
-                    THELOAI moi = getTHELOAIByForm();
+                    NXB cu = getNHAXUATBANByID();
+                    NXB moi = getNHAXUATBANByForm();
                     CapNhat(ref cu, moi);
 
                     try
                     {
                         db.SaveChanges();
-                        MessageBox.Show("Sưa thông tin thể loại thành công",
+                        MessageBox.Show("Sưa thông tin nhà xuất bản thành công",
                                         "Thông báo",
                                         MessageBoxButtons.OK,
                                         MessageBoxIcon.Information);
                     }
                     catch (Exception ex)
                     {
-                        MessageBox.Show("Sửa thông tin thể loại thất bại\n" + ex.Message,
+                        MessageBox.Show("Sửa thông tin nhà xuất bản thất bại\n" + ex.Message,
                                         "Thông báo",
                                         MessageBoxButtons.OK,
                                         MessageBoxIcon.Error);
                     }
-                    LoadDgvNhanVien();
+                    LoadDgvNXB();
                 }
 
                 return;
@@ -279,8 +279,8 @@ namespace BookShop.GUI
             {
                 if (!CheckLuaChon()) return;
 
-                THELOAI cu = getTHELOAIByID();
-                DialogResult rs = MessageBox.Show("Bạn có chắc chắn xóa thể loại " + cu.TEN + "?",
+                NXB cu = getNHAXUATBANByID();
+                DialogResult rs = MessageBox.Show("Bạn có chắc chắn xóa nhà xuất bản " + cu.TEN + "?",
                                                   "Thông báo",
                                                   MessageBoxButtons.OKCancel,
                                                   MessageBoxIcon.Warning);
@@ -289,21 +289,21 @@ namespace BookShop.GUI
 
                 try
                 {
-                    db.THELOAIs.Remove(cu);
+                    db.NXBs.Remove(cu);
                     db.SaveChanges();
-                    MessageBox.Show("Xóa thông tin thể loại thành công",
+                    MessageBox.Show("Xóa thông tin nhà xuất bản thành công",
                                     "Thông báo",
                                     MessageBoxButtons.OK,
                                     MessageBoxIcon.Information);
                 }
                 catch (Exception ex)
                 {
-                    MessageBox.Show("Xóa thông tin thể loại thất bại\n" + ex.Message,
+                    MessageBox.Show("Xóa thông tin nhà xuất bản thất bại\n" + ex.Message,
                                     "Thông báo",
                                     MessageBoxButtons.OK,
                                     MessageBoxIcon.Error);
                 }
-                LoadDgvNhanVien();
+                LoadDgvNXB();
 
                 return;
             }
@@ -325,7 +325,7 @@ namespace BookShop.GUI
 
         private void txtTimKiem_TextChanged(object sender, EventArgs e)
         {
-            LoadDgvNhanVien();
+            LoadDgvNXB();
             txtTimKiem.Focus();
         }
 

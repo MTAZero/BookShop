@@ -31,7 +31,7 @@ namespace BookShop.GUI
         {
             try
             {
-                int id = (int)dgvTheLoai.GetFocusedRowCellValue("ID");
+                int id = (int) dgvTheLoai.GetFocusedRowCellValue("ID");
                 THELOAI ans = db.THELOAIs.Where(p => p.ID == id).FirstOrDefault();
                 if (ans == null) return new THELOAI();
                 return ans;
@@ -131,7 +131,7 @@ namespace BookShop.GUI
             ClearControl();
         }
 
-        private void LoadDgvTheLoai()
+        private void LoadDgvNhanVien()
         {
             int i = 0;
             string keyWord = txtTimKiem.Text.Trim().ToUpper();
@@ -329,22 +329,7 @@ namespace BookShop.GUI
             txtTimKiem.Focus();
         }
 
-        private void btnThem_Click_1(object sender, EventArgs e)
-        {
-
-        }
-
-        private void btnSua_Click_1(object sender, EventArgs e)
-        {
-
-        }
-
-        private void btnXoa_Click_1(object sender, EventArgs e)
-        {
-
-        }
-
-        private void dgvTheLoai_FocusedRowChanged(object sender, DevExpress.XtraGrid.Views.Base.FocusedRowChangedEventArgs e)
+        private void dgvNhaXuatBan_FocusedRowChanged(object sender, DevExpress.XtraGrid.Views.Base.FocusedRowChangedEventArgs e)
         {
             UpdateDetail();
 
@@ -355,6 +340,7 @@ namespace BookShop.GUI
             }
             catch { }
         }
+
         #endregion
     }
 }
