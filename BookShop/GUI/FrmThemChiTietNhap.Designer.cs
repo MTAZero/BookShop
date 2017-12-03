@@ -98,9 +98,9 @@
             this.txtThanhTien.AutoSize = true;
             this.txtThanhTien.Location = new System.Drawing.Point(188, 212);
             this.txtThanhTien.Name = "txtThanhTien";
-            this.txtThanhTien.Size = new System.Drawing.Size(53, 17);
+            this.txtThanhTien.Size = new System.Drawing.Size(15, 17);
             this.txtThanhTien.TabIndex = 23;
-            this.txtThanhTien.Text = "150,000";
+            this.txtThanhTien.Text = "0";
             // 
             // btnChon
             // 

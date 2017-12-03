@@ -14,10 +14,19 @@ namespace BookShop.GUI
 {
     public partial class FrmThemChiTietNhap : MetroForm
     {
-        public FrmThemChiTietNhap()
+        private BookShopContext db = Helper.db;
+        private PHIEUNHAP pn = new PHIEUNHAP();
+
+        #region Hàm khởi tạo
+        public FrmThemChiTietNhap(PHIEUNHAP z)
         {
             InitializeComponent();
+            Helper.Reload();
+            pn = z;
+            Helper.IDSanPham = db.MATHANGs.FirstOrDefault().ID;
+            
         }
+        #endregion
 
         #region Hàm chức năng
         private void Loadz()
@@ -40,6 +49,11 @@ namespace BookShop.GUI
             txtThanhTien.Text = gt.ToString("N0");
         }
 
+        private bool Check()
+        {
+            return true;
+        }
+
         #endregion
 
         #region Sự kiện
@@ -57,7 +71,40 @@ namespace BookShop.GUI
 
         private void btnHoanThanh_Click(object sender, EventArgs e)
         {
+            if (Check())
+            {
+                CHITIETNHAP z = new CHITIETNHAP();
+                z.MATHANGID = Helper.IDSanPham;
+                z.SOLUONG = (int)txtSoLuong.Value;
+                z.DONGIA = (int)txtDonGia.Value;
+                z.THANHTIEN = z.SOLUONG * z.DONGIA;
+                
+                try
+                {
+                    db.SaveChanges();
+                    MATHANG mh = db.MATHANGs.Where(p => p.ID == z.MATHANGID).FirstOrDefault();
+                    mh.SOLUONG += z.SOLUONG;
+                    pn.TONGTIEN += z.THANHTIEN;
+                    db.SaveChanges();
 
+                    MessageBox.Show("Thêm chi tiết nhập thành công",
+                                    "Thông báo",
+                                    MessageBoxButtons.OK,
+                                    MessageBoxIcon.Information);
+
+                    
+
+                    this.Close();
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Thêm chi tiết nhập thất bại\n"+ex.Message,
+                                    "Thông báo",
+                                    MessageBoxButtons.OK,
+                                    MessageBoxIcon.Error);
+                    return;
+                }
+            }
         }
 
         private void btnHuy_Click(object sender, EventArgs e)
@@ -65,7 +112,6 @@ namespace BookShop.GUI
             this.Close();
         }
         #endregion
-
 
         #region Sự kiện ngầm
         private void txtSoLuong_ValueChanged(object sender, EventArgs e)
@@ -82,6 +128,14 @@ namespace BookShop.GUI
         #region LoadForm
         private void FrmThemChiTietNhap_Load(object sender, EventArgs e)
         {
+            if (Helper.IDSanPham == 0)
+            {
+                MessageBox.Show("Chưa có loại sản phẩm nào\nVui lòng thêm danh mục các sản phẩm",
+                                "Thông báo",
+                                MessageBoxButtons.OK,
+                                MessageBoxIcon.Error);
+                this.Close();
+            }
             Loadz();
         }
         #endregion

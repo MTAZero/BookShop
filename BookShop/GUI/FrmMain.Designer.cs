@@ -389,6 +389,7 @@
             this.Resizable = false;
             this.Style = MetroFramework.MetroColorStyle.Silver;
             this.Text = "FrmMain";
+            this.Load += new System.EventHandler(this.FrmMain_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ribbonControl1)).EndInit();

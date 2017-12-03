@@ -55,9 +55,11 @@ namespace BookShop.GUI
         }
         #endregion
 
+        #region Sự kiện
         private void btnTimKiem_Click(object sender, EventArgs e)
         {
             LoadSanPham();
         }
+        #endregion
     }
 }

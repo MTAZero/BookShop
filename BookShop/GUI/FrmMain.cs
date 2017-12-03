@@ -22,6 +22,7 @@ namespace BookShop.GUI
             InitializeComponent();
             Helper.Reload();
             nv = db.NHANVIENs.Where(p => p.CHUCVU == 1).FirstOrDefault();
+            Helper.IDNhanVien = nv.ID;
         }
 
         #region Sự kiện mở các form chức năng
@@ -129,8 +130,11 @@ namespace BookShop.GUI
         }
 
 
+
         #endregion
 
-        
+        private void FrmMain_Load(object sender, EventArgs e)
+        {
+        }
     }
 }

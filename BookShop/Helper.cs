@@ -71,6 +71,9 @@ namespace BookShop
         }
 
         public static int IDSanPham = 0; // sản phẩm lựa chọn
+        public static int IDPhieuNhap = 0; //  Phiếu nhập đang nhập
+        public static int IDHoaDon = 0; // Hóa đơn đang bán
+        public static int IDNhanVien = 0; // Nhân viên đang đăng nhập
 
     }
 }
