@@ -1,4 +1,5 @@
-﻿using MetroFramework.Forms;
+﻿using BookShop.Model;
+using MetroFramework.Forms;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -13,9 +14,14 @@ namespace BookShop.GUI
 {
     public partial class FrmMain : MetroForm
     {
+        private BookShopContext db = Helper.db;
+        private NHANVIEN nv = new NHANVIEN();
+
         public FrmMain()
         {
             InitializeComponent();
+            Helper.Reload();
+            nv = db.NHANVIENs.Where(p => p.CHUCVU == 1).FirstOrDefault();
         }
 
         #region Sự kiện mở các form chức năng
@@ -106,13 +112,13 @@ namespace BookShop.GUI
 
         private void barThongTinCaNhan_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
-            FrmThongTinCaNhan form = new FrmThongTinCaNhan();
+            FrmThongTinCaNhan form = new FrmThongTinCaNhan(nv);
             form.ShowDialog();
         }
 
         private void barDoiMatKhau_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
-            FrmDoiMatKhau form = new FrmDoiMatKhau();
+            FrmDoiMatKhau form = new FrmDoiMatKhau(nv);
             form.ShowDialog();
         }
 
