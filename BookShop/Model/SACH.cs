@@ -17,6 +17,8 @@ namespace BookShop.Model
 
         public int ID { get; set; }
 
+        public string TEN { get; set; }
+
         public int? NXBID { get; set; }
 
         public int? TACGIAID { get; set; }
