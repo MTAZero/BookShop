@@ -32,8 +32,6 @@ namespace BookShop.Model
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<CHITIETNHAP> CHITIETNHAPs { get; set; }
 
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-
         public virtual SACH SACH { get; set; }
 
         public virtual VANPHONGPHAM VANPHONGPHAM { get; set; }

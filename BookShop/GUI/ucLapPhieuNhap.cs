@@ -44,6 +44,23 @@ namespace BookShop.GUI
 
         #region LoadForm
 
+        private void LoadDgvChiTietNhap()
+        {
+            txtChiPhi.Text = ((int)pn.TONGTIEN).ToString("N0");
+
+            int i = 0;
+            dgvChiTietNhapMain.DataSource = db.CHITIETNHAPs.Where(p => p.PHIEUNHAPID == pn.ID).ToList()
+                                            .Select(p => new
+                                            {
+                                                STT = ++i,
+                                                MatHang = Helper.TenSanPham(db.MATHANGs.Where(z=>z.ID == p.MATHANGID).FirstOrDefault()),
+                                                DonGia = ((int) p.DONGIA).ToString("N0"),
+                                                SoLuong = p.SOLUONG,
+                                                ThanhTien = ((int) p.THANHTIEN).ToString("N0")
+                                            })
+                                            .ToList();
+        }
+
         private void LoadInitControl()
         {
             cbxNhanVien.Properties.DataSource = db.NHANVIENs.Select(p => new { ID = p.ID, Ten = p.TEN }).ToList();
@@ -90,6 +107,8 @@ namespace BookShop.GUI
 
             dgvChiTietNhapMain.Enabled = true;
 
+            LoadDgvChiTietNhap();
+
         }
         private void ucLapPhieuNhap_Load(object sender, EventArgs e)
         {
@@ -110,11 +129,12 @@ namespace BookShop.GUI
         {
             FrmThemChiTietNhap form = new FrmThemChiTietNhap(pn);
             form.ShowDialog();
+            LoadDgvChiTietNhap();
         }
 
         private void btnInHoaDon_Click(object sender, EventArgs e)
         {
-
+            LoadDgvChiTietNhap();
         }
 
         private void btnHoanThanhPhieuNhap_Click(object sender, EventArgs e)
@@ -123,10 +143,13 @@ namespace BookShop.GUI
             dateNgayBan.DateTime = DateTime.Now;
             Helper.IDPhieuNhap = 0;
 
-            MessageBox.Show("Hoàn thành thêm phiếu nhập thành côbg",
+            MessageBox.Show("Hoàn thành thêm phiếu nhập thành công",
                             "Thông báo",
                             MessageBoxButtons.OK,
-                            MessageBoxIcon.Error);
+                            MessageBoxIcon.Information);
+
+            LoadNewPhieuNhap();
+            dgvChiTietNhapMain.DataSource = null;
         }
 
         private void btnTra_Click(object sender, EventArgs e)

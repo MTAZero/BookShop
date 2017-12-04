@@ -17,8 +17,6 @@ namespace BookShop.Model
 
         public int ID { get; set; }
 
-        public string TEN { get; set; }
-
         public int? NXBID { get; set; }
 
         public int? TACGIAID { get; set; }
@@ -33,6 +31,8 @@ namespace BookShop.Model
 
         [Column(TypeName = "image")]
         public byte[] ANH { get; set; }
+
+        public string TEN { get; set; }
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<MATHANG> MATHANGs { get; set; }

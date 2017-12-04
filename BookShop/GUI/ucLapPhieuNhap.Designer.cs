@@ -176,6 +176,7 @@
             // STT
             // 
             this.STT.Caption = "TT";
+            this.STT.FieldName = "STT";
             this.STT.Name = "STT";
             this.STT.Visible = true;
             this.STT.VisibleIndex = 0;
@@ -184,6 +185,7 @@
             // Ten
             // 
             this.Ten.Caption = "Mặt hàng";
+            this.Ten.FieldName = "MatHang";
             this.Ten.Name = "Ten";
             this.Ten.Visible = true;
             this.Ten.VisibleIndex = 1;
@@ -192,6 +194,7 @@
             // DonGia
             // 
             this.DonGia.Caption = "Đơn giá";
+            this.DonGia.FieldName = "DonGia";
             this.DonGia.Name = "DonGia";
             this.DonGia.Visible = true;
             this.DonGia.VisibleIndex = 2;
@@ -200,6 +203,7 @@
             // SoLuong
             // 
             this.SoLuong.Caption = "Số lượng";
+            this.SoLuong.FieldName = "SoLuong";
             this.SoLuong.Name = "SoLuong";
             this.SoLuong.Visible = true;
             this.SoLuong.VisibleIndex = 3;
@@ -208,6 +212,7 @@
             // ThanhTien
             // 
             this.ThanhTien.Caption = "Thành tiền";
+            this.ThanhTien.FieldName = "ThanhTien";
             this.ThanhTien.Name = "ThanhTien";
             this.ThanhTien.Visible = true;
             this.ThanhTien.VisibleIndex = 4;

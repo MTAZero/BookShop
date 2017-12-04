@@ -22,5 +22,7 @@ namespace BookShop.Model
         public int? HOADONBANID { get; set; }
 
         public virtual MATHANG MATHANG { get; set; }
+
+        public virtual HOADONBAN HOADONBAN { get; set; }
     }
 }

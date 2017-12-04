@@ -22,5 +22,7 @@ namespace BookShop.Model
         public int? PHIEUNHAPID { get; set; }
 
         public virtual MATHANG MATHANG { get; set; }
+
+        public virtual PHIEUNHAP PHIEUNHAP { get; set; }
     }
 }

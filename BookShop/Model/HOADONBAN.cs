@@ -9,6 +9,12 @@ namespace BookShop.Model
     [Table("HOADONBAN")]
     public partial class HOADONBAN
     {
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
+        public HOADONBAN()
+        {
+            CHITIETHOADONs = new HashSet<CHITIETHOADON>();
+        }
+
         public int ID { get; set; }
 
         public string MAHOADON { get; set; }
@@ -18,6 +24,9 @@ namespace BookShop.Model
         public DateTime? NGAY { get; set; }
 
         public int? TONGTIEN { get; set; }
+
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<CHITIETHOADON> CHITIETHOADONs { get; set; }
 
         public virtual NHANVIEN NHANVIEN { get; set; }
     }

@@ -37,7 +37,6 @@ namespace BookShop.GUI
                 if (mh != null)
                 {
                     txtTenMatHang.Text = Helper.TenSanPham(mh);
-
                 }
             }
             catch { }
@@ -73,14 +72,28 @@ namespace BookShop.GUI
         {
             if (Check())
             {
-                CHITIETNHAP z = new CHITIETNHAP();
-                z.MATHANGID = Helper.IDSanPham;
-                z.SOLUONG = (int)txtSoLuong.Value;
-                z.DONGIA = (int)txtDonGia.Value;
-                z.THANHTIEN = z.SOLUONG * z.DONGIA;
+                CHITIETNHAP ctn = db.CHITIETNHAPs.Where(p => p.PHIEUNHAPID == pn.ID && p.MATHANGID == Helper.IDSanPham).FirstOrDefault();
+
+                if (ctn.ID == 0)
+                {
+                    CHITIETNHAP z = new CHITIETNHAP();
+                    z.MATHANGID = Helper.IDSanPham;
+                    z.SOLUONG = (int)txtSoLuong.Value;
+                    z.DONGIA = (int)txtDonGia.Value;
+                    z.THANHTIEN = z.SOLUONG * z.DONGIA;
+                    z.PHIEUNHAPID = pn.ID;
+                    db.CHITIETNHAPs.Add(z);
+                }
+                else
+                {
+                    ctn.SOLUONG += (int)txtSoLuong.Value;
+                    ctn.THANHTIEN = ctn.SOLUONG * ctn.DONGIA;
+                    
+                }
                 
                 try
                 {
+                    
                     db.SaveChanges();
                     MATHANG mh = db.MATHANGs.Where(p => p.ID == z.MATHANGID).FirstOrDefault();
                     mh.SOLUONG += z.SOLUONG;
@@ -102,7 +115,7 @@ namespace BookShop.GUI
                                     "Thông báo",
                                     MessageBoxButtons.OK,
                                     MessageBoxIcon.Error);
-                    return;
+                    this.Close();
                 }
             }
         }
