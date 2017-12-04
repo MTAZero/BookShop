@@ -290,6 +290,7 @@
             this.barLapPhieuXuat.Id = 21;
             this.barLapPhieuXuat.Name = "barLapPhieuXuat";
             this.barLapPhieuXuat.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large;
+            this.barLapPhieuXuat.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barLapPhieuXuat_ItemClick);
             // 
             // barKho
             // 

@@ -274,6 +274,14 @@ namespace BookShop.GUI
                     try
                     {
                         db.SaveChanges();
+
+                        MATHANG mh = new MATHANG();
+                        mh.LOAISP = 1;
+                        mh.SOLUONG = 0;
+                        mh.VANPHONGPHAMID = moi.ID;
+                        db.MATHANGs.Add(mh);
+                        db.SaveChanges();
+
                         MessageBox.Show("Thêm thông tin văn phòng phẩm thành công",
                                         "Thông báo",
                                         MessageBoxButtons.OK,
@@ -358,6 +366,9 @@ namespace BookShop.GUI
 
                 try
                 {
+                    MATHANG mh = db.MATHANGs.Where(p => p.LOAISP == 1 && p.VANPHONGPHAMID == cu.ID).FirstOrDefault();
+                    if (mh != null) db.MATHANGs.Remove(mh);
+
                     db.VANPHONGPHAMs.Remove(cu);
                     db.SaveChanges();
                     MessageBox.Show("Xóa thông tin văn phòng phẩm thành công",

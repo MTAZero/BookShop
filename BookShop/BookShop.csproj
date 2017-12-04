@@ -103,6 +103,12 @@
     <Compile Include="GUI\FrmMain.Designer.cs">
       <DependentUpon>FrmMain.cs</DependentUpon>
     </Compile>
+    <Compile Include="GUI\FrmThemChiTietHoaDon.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\FrmThemChiTietHoaDon.Designer.cs">
+      <DependentUpon>FrmThemChiTietHoaDon.cs</DependentUpon>
+    </Compile>
     <Compile Include="GUI\FrmThemChiTietNhap.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -163,17 +169,17 @@
     <Compile Include="GUI\ucKho.Designer.cs">
       <DependentUpon>ucKho.cs</DependentUpon>
     </Compile>
-    <Compile Include="GUI\ucLapPhieuNhap.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="GUI\ucLapPhieuNhap.Designer.cs">
-      <DependentUpon>ucLapPhieuNhap.cs</DependentUpon>
-    </Compile>
     <Compile Include="GUI\ucLapPhieuXuat.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="GUI\ucLapPhieuXuat.Designer.cs">
       <DependentUpon>ucLapPhieuXuat.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\ucLapPhieuNhap.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GUI\ucLapPhieuNhap.Designer.cs">
+      <DependentUpon>ucLapPhieuNhap.cs</DependentUpon>
     </Compile>
     <Compile Include="GUI\ucNhapHang.cs">
       <SubType>UserControl</SubType>
@@ -232,6 +238,9 @@
     <EmbeddedResource Include="GUI\FrmMain.resx">
       <DependentUpon>FrmMain.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="GUI\FrmThemChiTietHoaDon.resx">
+      <DependentUpon>FrmThemChiTietHoaDon.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="GUI\FrmThemChiTietNhap.resx">
       <DependentUpon>FrmThemChiTietNhap.cs</DependentUpon>
     </EmbeddedResource>
@@ -262,11 +271,11 @@
     <EmbeddedResource Include="GUI\ucKho.resx">
       <DependentUpon>ucKho.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="GUI\ucLapPhieuNhap.resx">
-      <DependentUpon>ucLapPhieuNhap.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="GUI\ucLapPhieuXuat.resx">
       <DependentUpon>ucLapPhieuXuat.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\ucLapPhieuNhap.resx">
+      <DependentUpon>ucLapPhieuNhap.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\ucNhapHang.resx">
       <DependentUpon>ucNhapHang.cs</DependentUpon>

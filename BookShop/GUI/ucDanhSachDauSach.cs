@@ -313,10 +313,19 @@ namespace BookShop.GUI
 
                     SACH moi = getSACHByForm();
                     db.SACHes.Add(moi);
+                    
 
                     try
                     {
                         db.SaveChanges();
+
+                        MATHANG mh = new MATHANG();
+                        mh.LOAISP = 0;
+                        mh.SACHID = moi.ID;
+                        mh.SOLUONG = 0;
+                        db.MATHANGs.Add(mh);
+                        db.SaveChanges();
+
                         MessageBox.Show("Thêm thông tin đầu sách thành công",
                                         "Thông báo",
                                         MessageBoxButtons.OK,
@@ -401,6 +410,9 @@ namespace BookShop.GUI
 
                 try
                 {
+                    MATHANG mh = db.MATHANGs.Where(p => p.LOAISP == 0 && p.SACHID == cu.ID).FirstOrDefault();
+                    if (mh != null) db.MATHANGs.Remove(mh);
+
                     db.SACHes.Remove(cu);
                     db.SaveChanges();
                     MessageBox.Show("Xóa thông tin đầu sách thành công",

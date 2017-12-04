@@ -314,9 +314,9 @@
             this.label5.AutoSize = true;
             this.label5.Location = new System.Drawing.Point(26, 69);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(72, 17);
+            this.label5.Size = new System.Drawing.Size(79, 17);
             this.label5.TabIndex = 2;
-            this.label5.Text = "Ngày bán :";
+            this.label5.Text = "Ngày nhập :";
             // 
             // label4
             // 

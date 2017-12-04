@@ -116,6 +116,14 @@ namespace BookShop.GUI
             panelMain.Controls.Add(uc);
         }
 
+        private void barLapPhieuXuat_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            panelMain.Controls.Clear();
+            ucLapPhieuXuat uc = new ucLapPhieuXuat();
+            uc.Dock = DockStyle.Fill;
+            panelMain.Controls.Add(uc);
+        }
+
 
         private void barThongTinCaNhan_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {

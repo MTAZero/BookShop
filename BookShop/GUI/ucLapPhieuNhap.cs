@@ -130,6 +130,32 @@ namespace BookShop.GUI
                 LoadOldPhieuNhap();
             }
         }
+
+        private bool Check()
+        {
+            if (txtMaPhieuNhap.Text == "")
+            {
+                MessageBox.Show("Mã phiếu nhập không được để trống",
+                                "Thông báo",
+                                MessageBoxButtons.OK,
+                                MessageBoxIcon.Error);
+                return false;
+            }
+
+            string z = txtMaPhieuNhap.Text;
+            int cnt = db.PHIEUNHAPs.Where(p => p.MAPHIEUNHAP == z).ToList().Count;
+            if (cnt > 0)
+            {
+                MessageBox.Show("Mã phiếu nhập đã được sử dụng",
+                                "Thông báo",
+                                MessageBoxButtons.OK,
+                                MessageBoxIcon.Error);
+                return false;
+            }
+
+            return true;
+        }
+
         #endregion
 
         #region Sự kiện
@@ -158,6 +184,9 @@ namespace BookShop.GUI
 
             LoadNewPhieuNhap();
             dgvChiTietNhapMain.DataSource = null;
+            btnLapPhieuNhap.Enabled = true;
+            txtMaPhieuNhap.Text = "";
+            txtChiPhi.Text = "0";
         }
 
         private void btnTra_Click(object sender, EventArgs e)
@@ -210,24 +239,28 @@ namespace BookShop.GUI
 
         private void btnLapPhieuNhap_Click(object sender, EventArgs e)
         {
-            PHIEUNHAP z = getPhieuNhapByForm();
-            db.PHIEUNHAPs.Add(z);
-            try
+            if (Check())
             {
-                db.SaveChanges();
-                MessageBox.Show("Thêm chi tiết phiếu nhập thành công",
-                                "Thông báo",
-                                MessageBoxButtons.OK,
-                                MessageBoxIcon.Information);
+                PHIEUNHAP z = getPhieuNhapByForm();
+                db.PHIEUNHAPs.Add(z);
+                try
+                {
+                    db.SaveChanges();
+                    MessageBox.Show("Thêm chi tiết phiếu nhập thành công",
+                                    "Thông báo",
+                                    MessageBoxButtons.OK,
+                                    MessageBoxIcon.Information);
 
-                Helper.IDPhieuNhap = z.ID;
-                pn = z;
-                LoadOldPhieuNhap();
-               
-            }
-            catch
-            {
-                
+                    Helper.IDPhieuNhap = z.ID;
+                    pn = z;
+                    LoadOldPhieuNhap();
+                    btnLapPhieuNhap.Enabled = false;
+                }
+                catch
+                {
+
+                }
+                return;
             }
         }
         #endregion

@@ -12,13 +12,13 @@ using System.Windows.Forms;
 
 namespace BookShop.GUI
 {
-    public partial class FrmThemChiTietNhap : MetroForm
+    public partial class FrmThemChiTietHoaDon : MetroForm
     {
         private BookShopContext db = Helper.db;
-        private PHIEUNHAP pn = new PHIEUNHAP();
+        private HOADONBAN pn = new HOADONBAN();
 
         #region Hàm khởi tạo
-        public FrmThemChiTietNhap(PHIEUNHAP z)
+        public FrmThemChiTietHoaDon(HOADONBAN z)
         {
             InitializeComponent();
             Helper.Reload();
@@ -37,6 +37,8 @@ namespace BookShop.GUI
                 if (mh != null)
                 {
                     txtTenMatHang.Text = Helper.TenSanPham(mh);
+                    txtDonGia.Text = Helper.GiaSanPham(mh).ToString("N0");
+                    txtKho.Text = "( Trong kho : " + mh.SOLUONG + " ) ";
                 }
             }
             catch { }
@@ -44,7 +46,8 @@ namespace BookShop.GUI
 
         private void TinhThanhTien()
         {
-            Int64 gt = (Int64)txtSoLuong.Value * (Int64)txtDonGia.Value;
+            MATHANG mh = Helper.db.MATHANGs.Where(p => p.ID == Helper.IDSanPham).First();
+            Int64 gt = (Int64)txtSoLuong.Value * Helper.GiaSanPham(mh);
             txtThanhTien.Text = gt.ToString("N0");
         }
 
@@ -52,7 +55,21 @@ namespace BookShop.GUI
         {
             if (txtSoLuong.Value == 0)
             {
-                MessageBox.Show("Số lượng phải là số nguyên dương",
+                MessageBox.Show("Số lượng sản phẩm phải là số nguyên dương",
+                                "Thông báo",
+                                MessageBoxButtons.OK,
+                                MessageBoxIcon.Error);
+                return false;
+            }
+
+
+            /// check trong kho
+            int sl = (int) txtSoLuong.Value;
+
+            MATHANG mh = Helper.db.MATHANGs.Where(p => p.ID == Helper.IDSanPham).First();
+            if (sl > mh.SOLUONG)
+            {
+                MessageBox.Show("Số lượng hàng trong kho không đủ",
                                 "Thông báo",
                                 MessageBoxButtons.OK,
                                 MessageBoxIcon.Error);
@@ -81,24 +98,37 @@ namespace BookShop.GUI
         {
             if (Check())
             {
-                CHITIETNHAP z = new CHITIETNHAP();
+                CHITIETHOADON z = new CHITIETHOADON();
                 z.MATHANGID = Helper.IDSanPham;
                 z.SOLUONG = (int)txtSoLuong.Value;
-                z.DONGIA = (int)txtDonGia.Value;
+
+                MATHANG mhz = Helper.db.MATHANGs.Where(p => p.ID == Helper.IDSanPham).First();
+                z.DONGIA = Helper.GiaSanPham(mhz);
                 z.THANHTIEN = z.SOLUONG * z.DONGIA;
-                z.PHIEUNHAPID = pn.ID;
-                db.CHITIETNHAPs.Add(z);
+                z.HOADONBANID = pn.ID;
+
+                CHITIETHOADON cthd = db.CHITIETHOADONs.Where(p => p.MATHANGID == z.MATHANGID && p.HOADONBANID == pn.ID).FirstOrDefault();
+
+                if (cthd == null)
+                {
+                    db.CHITIETHOADONs.Add(z);
+                }
+                else
+                {
+                    cthd.SOLUONG += z.SOLUONG;
+                    cthd.THANHTIEN += z.THANHTIEN;
+                }
 
                 try
                 {
 
                     db.SaveChanges();
                     MATHANG mh = db.MATHANGs.Where(p => p.ID == z.MATHANGID).FirstOrDefault();
-                    mh.SOLUONG += z.SOLUONG;
+                    mh.SOLUONG -= z.SOLUONG;
                     pn.TONGTIEN += z.THANHTIEN;
                     db.SaveChanges();
 
-                    MessageBox.Show("Thêm chi tiết nhập thành công",
+                    MessageBox.Show("Thêm chi tiết hóa đơn thành công",
                                     "Thông báo",
                                     MessageBoxButtons.OK,
                                     MessageBoxIcon.Information);
@@ -109,7 +139,7 @@ namespace BookShop.GUI
                 }
                 catch (Exception ex)
                 {
-                    MessageBox.Show("Thêm chi tiết nhập thất bại\n" + ex.Message,
+                    MessageBox.Show("Thêm chi tiết hóa đơn thất bại\n" + ex.Message,
                                     "Thông báo",
                                     MessageBoxButtons.OK,
                                     MessageBoxIcon.Error);
@@ -126,11 +156,6 @@ namespace BookShop.GUI
 
         #region Sự kiện ngầm
         private void txtSoLuong_ValueChanged(object sender, EventArgs e)
-        {
-            TinhThanhTien();
-        }
-
-        private void txtDonGia_ValueChanged(object sender, EventArgs e)
         {
             TinhThanhTien();
         }
