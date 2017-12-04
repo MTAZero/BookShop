@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using BookShop.Model;
+using BookShop.Report;
 
 namespace BookShop.GUI
 {
@@ -167,7 +168,8 @@ namespace BookShop.GUI
 
         private void btnInHoaDon_Click(object sender, EventArgs e)
         {
-            LoadDgvChiTietNhap();
+            FrmRpHoaDon form = new FrmRpHoaDon(pn);
+            form.ShowDialog();
         }
 
         private void btnHoanThanhPhieuNhap_Click(object sender, EventArgs e)

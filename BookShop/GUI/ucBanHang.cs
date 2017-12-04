@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using BookShop.Model;
+using BookShop.Report;
 
 namespace BookShop.GUI
 {
@@ -137,6 +138,27 @@ namespace BookShop.GUI
 
         #endregion
 
-        
+        #region Sự kiện
+        private void btnInHoaDon_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                int ID = (int)dgvHoaDon.GetFocusedRowCellValue("ID");
+                HOADONBAN hd = db.HOADONBANs.Where(p => p.ID == ID).FirstOrDefault();
+                FrmRpHoaDon form = new FrmRpHoaDon(hd);
+                form.ShowDialog();
+            }
+            catch
+            {
+                MessageBox.Show("Chưa có hóa đơn nào được chọn",
+                                "Thông báo",
+                                MessageBoxButtons.OK,
+                                MessageBoxIcon.Error);
+                return;
+            }
+        }
+        #endregion
+
+
     }
 }

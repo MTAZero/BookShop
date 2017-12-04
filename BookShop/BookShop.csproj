@@ -62,12 +62,15 @@
       <HintPath>..\packages\MetroModernUI.1.4.0.0\lib\net\MetroFramework.Fonts.dll</HintPath>
       <Private>True</Private>
     </Reference>
+    <Reference Include="Microsoft.ReportViewer.Common, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91" />
+    <Reference Include="Microsoft.ReportViewer.WinForms, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91" />
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
     <Reference Include="System.Data.Linq" />
     <Reference Include="System.Runtime.Serialization" />
     <Reference Include="System.Security" />
+    <Reference Include="System.Web.Services" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -226,6 +229,23 @@
     <Compile Include="Model\VANPHONGPHAM.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Report\FrmRpPhieuNhap.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Report\FrmRpPhieuNhap.Designer.cs">
+      <DependentUpon>FrmRpPhieuNhap.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Report\FrmRpHoaDon.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Report\FrmRpHoaDon.Designer.cs">
+      <DependentUpon>FrmRpHoaDon.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Report\rpDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rpDataSet.xsd</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="GUI\FrmDoiMatKhau.resx">
       <DependentUpon>FrmDoiMatKhau.cs</DependentUpon>
     </EmbeddedResource>
@@ -303,6 +323,14 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="Report\FrmRpPhieuNhap.resx">
+      <DependentUpon>FrmRpPhieuNhap.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\FrmRpHoaDon.resx">
+      <DependentUpon>FrmRpHoaDon.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\rpPhieuNhap.rdlc" />
+    <EmbeddedResource Include="Report\rpHoaDon.rdlc" />
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -319,6 +347,17 @@
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>
+    <None Include="Report\rpDataSet.xsc">
+      <DependentUpon>rpDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Report\rpDataSet.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>rpDataSet.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Report\rpDataSet.xss">
+      <DependentUpon>rpDataSet.xsd</DependentUpon>
+    </None>
     <None Include="Resources\LoginIcon.png" />
   </ItemGroup>
   <ItemGroup>

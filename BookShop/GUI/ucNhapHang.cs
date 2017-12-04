@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using BookShop.Model;
+using BookShop.Report;
 
 namespace BookShop.GUI
 {
@@ -134,6 +135,25 @@ namespace BookShop.GUI
         }
 
         #endregion
+
+        private void btnInHoaDon_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                int ID = (int)dgvPhieuNhap.GetFocusedRowCellValue("ID");
+                PHIEUNHAP hd = db.PHIEUNHAPs.Where(p => p.ID == ID).FirstOrDefault();
+                FrmRpPhieuNhap form = new FrmRpPhieuNhap(hd);
+                form.ShowDialog();
+            }
+            catch
+            {
+                MessageBox.Show("Chưa có phiếu nhập nào được chọn",
+                                "Thông báo",
+                                MessageBoxButtons.OK,
+                                MessageBoxIcon.Error);
+                return;
+            }
+        }
 
 
     }

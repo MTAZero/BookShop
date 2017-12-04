@@ -30,6 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ucBanHang));
             this.panel1 = new System.Windows.Forms.Panel();
+            this.txtTongGiaTri = new System.Windows.Forms.Label();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.dateKetThuc = new DevExpress.XtraEditors.DateEdit();
             this.dateBatDau = new DevExpress.XtraEditors.DateEdit();
@@ -63,7 +64,6 @@
             this.NhanVien = new DevExpress.XtraGrid.Columns.GridColumn();
             this.ID = new DevExpress.XtraGrid.Columns.GridColumn();
             this.TongTien = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.txtTongGiaTri = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.groupBox3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dateKetThuc.Properties.CalendarTimeProperties)).BeginInit();
@@ -94,6 +94,15 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1308, 548);
             this.panel1.TabIndex = 0;
+            // 
+            // txtTongGiaTri
+            // 
+            this.txtTongGiaTri.AutoSize = true;
+            this.txtTongGiaTri.Location = new System.Drawing.Point(16, 117);
+            this.txtTongGiaTri.Name = "txtTongGiaTri";
+            this.txtTongGiaTri.Size = new System.Drawing.Size(141, 17);
+            this.txtTongGiaTri.TabIndex = 4;
+            this.txtTongGiaTri.Text = "Tổng giá trị : 1,500,000";
             // 
             // groupBox3
             // 
@@ -299,6 +308,7 @@
             this.btnInHoaDon.Size = new System.Drawing.Size(164, 44);
             this.btnInHoaDon.TabIndex = 10;
             this.btnInHoaDon.Text = "In hóa đơn";
+            this.btnInHoaDon.Click += new System.EventHandler(this.btnInHoaDon_Click);
             // 
             // panel2
             // 
@@ -492,15 +502,6 @@
             this.TongTien.Visible = true;
             this.TongTien.VisibleIndex = 3;
             this.TongTien.Width = 146;
-            // 
-            // txtTongGiaTri
-            // 
-            this.txtTongGiaTri.AutoSize = true;
-            this.txtTongGiaTri.Location = new System.Drawing.Point(16, 117);
-            this.txtTongGiaTri.Name = "txtTongGiaTri";
-            this.txtTongGiaTri.Size = new System.Drawing.Size(141, 17);
-            this.txtTongGiaTri.TabIndex = 4;
-            this.txtTongGiaTri.Text = "Tổng giá trị : 1,500,000";
             // 
             // ucBanHang
             // 
