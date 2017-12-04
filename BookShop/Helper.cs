@@ -70,6 +70,16 @@ namespace BookShop
             return ans;
         }
 
+        public static int GiaSanPham(MATHANG a)
+        {
+            int ans = 0;
+
+            if (a.LOAISP == 0) return (int) db.SACHes.Where(p => p.ID == a.SACHID).FirstOrDefault().GIABAN;
+            if (a.LOAISP == 1) return (int) db.VANPHONGPHAMs.Where(p => p.ID == a.VANPHONGPHAMID).FirstOrDefault().GIABAN;
+
+            return ans;
+        }
+
         public static int IDSanPham = 0; // sản phẩm lựa chọn
         public static int IDPhieuNhap = 0; //  Phiếu nhập đang nhập
         public static int IDHoaDon = 0; // Hóa đơn đang bán

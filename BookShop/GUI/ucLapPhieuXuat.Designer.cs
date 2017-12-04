@@ -308,7 +308,7 @@
             this.groupBox1.Size = new System.Drawing.Size(799, 444);
             this.groupBox1.TabIndex = 3;
             this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Chi tiết phiếu nhập";
+            this.groupBox1.Text = "Chi tiết hóa đơn";
             // 
             // panel4
             // 
@@ -368,7 +368,7 @@
             this.groupBox2.Size = new System.Drawing.Size(446, 331);
             this.groupBox2.TabIndex = 2;
             this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "Thông tin phiếu nhập";
+            this.groupBox2.Text = "Thông tin hóa đơn";
             // 
             // ucLapPhieuXuat
             // 

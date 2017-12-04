@@ -24,7 +24,7 @@ namespace BookShop.GUI
             Helper.Reload();
             pn = z;
             Helper.IDSanPham = db.MATHANGs.FirstOrDefault().ID;
-            
+
         }
         #endregion
 
@@ -44,7 +44,7 @@ namespace BookShop.GUI
 
         private void TinhThanhTien()
         {
-            Int64 gt = (Int64) txtSoLuong.Value *  (Int64) txtDonGia.Value;
+            Int64 gt = (Int64)txtSoLuong.Value * (Int64)txtDonGia.Value;
             txtThanhTien.Text = gt.ToString("N0");
         }
 
@@ -72,28 +72,17 @@ namespace BookShop.GUI
         {
             if (Check())
             {
-                CHITIETNHAP ctn = db.CHITIETNHAPs.Where(p => p.PHIEUNHAPID == pn.ID && p.MATHANGID == Helper.IDSanPham).FirstOrDefault();
+                CHITIETNHAP z = new CHITIETNHAP();
+                z.MATHANGID = Helper.IDSanPham;
+                z.SOLUONG = (int)txtSoLuong.Value;
+                z.DONGIA = (int)txtDonGia.Value;
+                z.THANHTIEN = z.SOLUONG * z.DONGIA;
+                z.PHIEUNHAPID = pn.ID;
+                db.CHITIETNHAPs.Add(z);
 
-                if (ctn.ID == 0)
-                {
-                    CHITIETNHAP z = new CHITIETNHAP();
-                    z.MATHANGID = Helper.IDSanPham;
-                    z.SOLUONG = (int)txtSoLuong.Value;
-                    z.DONGIA = (int)txtDonGia.Value;
-                    z.THANHTIEN = z.SOLUONG * z.DONGIA;
-                    z.PHIEUNHAPID = pn.ID;
-                    db.CHITIETNHAPs.Add(z);
-                }
-                else
-                {
-                    ctn.SOLUONG += (int)txtSoLuong.Value;
-                    ctn.THANHTIEN = ctn.SOLUONG * ctn.DONGIA;
-                    
-                }
-                
                 try
                 {
-                    
+
                     db.SaveChanges();
                     MATHANG mh = db.MATHANGs.Where(p => p.ID == z.MATHANGID).FirstOrDefault();
                     mh.SOLUONG += z.SOLUONG;
@@ -105,13 +94,13 @@ namespace BookShop.GUI
                                     MessageBoxButtons.OK,
                                     MessageBoxIcon.Information);
 
-                    
+
 
                     this.Close();
                 }
                 catch (Exception ex)
                 {
-                    MessageBox.Show("Thêm chi tiết nhập thất bại\n"+ex.Message,
+                    MessageBox.Show("Thêm chi tiết nhập thất bại\n" + ex.Message,
                                     "Thông báo",
                                     MessageBoxButtons.OK,
                                     MessageBoxIcon.Error);

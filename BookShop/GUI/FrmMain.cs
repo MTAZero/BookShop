@@ -129,12 +129,20 @@ namespace BookShop.GUI
             form.ShowDialog();
         }
 
-
+        private void barKho_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            panelMain.Controls.Clear();
+            ucKho uc = new ucKho();
+            uc.Dock = DockStyle.Fill;
+            panelMain.Controls.Add(uc);
+        }
 
         #endregion
 
         private void FrmMain_Load(object sender, EventArgs e)
         {
         }
+
+        
     }
 }

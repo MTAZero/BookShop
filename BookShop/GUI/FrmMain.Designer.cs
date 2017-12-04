@@ -298,6 +298,7 @@
             this.barKho.Id = 22;
             this.barKho.Name = "barKho";
             this.barKho.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large;
+            this.barKho.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barKho_ItemClick);
             // 
             // ribbonPage1
             // 

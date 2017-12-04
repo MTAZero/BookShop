@@ -40,6 +40,13 @@ namespace BookShop.GUI
             return ans;
         }
 
+        private CHITIETNHAP getChiTietNhapByForm()
+        {
+            int id = (int) dgvChiTietNhap.GetFocusedRowCellValue("ID");
+            CHITIETNHAP z = db.CHITIETNHAPs.Where(p => p.ID == id).FirstOrDefault();
+            return z;
+        }
+
         #endregion
 
         #region LoadForm
@@ -52,6 +59,7 @@ namespace BookShop.GUI
             dgvChiTietNhapMain.DataSource = db.CHITIETNHAPs.Where(p => p.PHIEUNHAPID == pn.ID).ToList()
                                             .Select(p => new
                                             {
+                                                ID = p.ID,
                                                 STT = ++i,
                                                 MatHang = Helper.TenSanPham(db.MATHANGs.Where(z=>z.ID == p.MATHANGID).FirstOrDefault()),
                                                 DonGia = ((int) p.DONGIA).ToString("N0"),
@@ -154,6 +162,48 @@ namespace BookShop.GUI
 
         private void btnTra_Click(object sender, EventArgs e)
         {
+            CHITIETNHAP a = getChiTietNhapByForm();
+            if (a.ID == 0)
+            {
+                MessageBox.Show("Chưa có chi tiết nhập nào được chọn",
+                                "Thông báo",
+                                MessageBoxButtons.OK,
+                                MessageBoxIcon.Error);
+                return;
+            }
+
+            DialogResult rs = MessageBox.Show("Bạn có chắc chắn xóa chi tiết nhập này?",
+                                              "Thông báo",
+                                              MessageBoxButtons.OK,
+                                              MessageBoxIcon.Warning);
+            if (rs == DialogResult.Cancel) return;
+
+            MATHANG mh = db.MATHANGs.Where(p => a.MATHANGID == p.ID).FirstOrDefault();
+            mh.SOLUONG -= a.SOLUONG;
+            if (mh.SOLUONG < 0) mh.SOLUONG = 0;
+
+            pn.TONGTIEN -= a.SOLUONG * a.DONGIA;
+            db.CHITIETNHAPs.Remove(a);
+
+            try
+            {
+                db.SaveChanges();
+                MessageBox.Show("Xóa chi tiết nhập thành công",
+                                "Thông báo",
+                                MessageBoxButtons.OK,
+                                MessageBoxIcon.Information);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Xóa chi tiết nhập thất bại\n" + ex.Message,
+                                "Thông báo",
+                                MessageBoxButtons.OK,
+                                MessageBoxIcon.Error);
+            }
+            finally
+            {
+                LoadDgvChiTietNhap();
+            }
 
         }
 

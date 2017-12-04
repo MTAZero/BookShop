@@ -100,7 +100,7 @@
             this.btnThem.Name = "btnThem";
             this.btnThem.Size = new System.Drawing.Size(213, 44);
             this.btnThem.TabIndex = 13;
-            this.btnThem.Text = "Thêm hàng";
+            this.btnThem.Text = "Thêm chi tiết nhập";
             this.btnThem.Click += new System.EventHandler(this.btnThem_Click);
             // 
             // btnTra
@@ -113,7 +113,7 @@
             this.btnTra.Name = "btnTra";
             this.btnTra.Size = new System.Drawing.Size(213, 44);
             this.btnTra.TabIndex = 10;
-            this.btnTra.Text = "Trả hàng";
+            this.btnTra.Text = "Xóa chi tiết nhập";
             this.btnTra.Click += new System.EventHandler(this.btnTra_Click);
             // 
             // groupBox1
