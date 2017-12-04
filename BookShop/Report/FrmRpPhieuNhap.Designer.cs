@@ -71,17 +71,17 @@
             this.rpViewerHoaDon.Size = new System.Drawing.Size(806, 504);
             this.rpViewerHoaDon.TabIndex = 0;
             // 
-            // FrmRpHoaDon
+            // FrmRpPhieuNhap
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(848, 586);
             this.Controls.Add(this.panel1);
             this.MaximizeBox = false;
-            this.Name = "FrmRpHoaDon";
+            this.Name = "FrmRpPhieuNhap";
             this.Resizable = false;
             this.Style = MetroFramework.MetroColorStyle.Black;
-            this.Text = "HÓA ĐƠN BÁN HÀNG";
+            this.Text = "PHIẾU NHẬP HÀNG";
             this.Load += new System.EventHandler(this.FrmRpHoaDon_Load);
             ((System.ComponentModel.ISupportInitialize)(this.HOADONBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.rpDataSet)).EndInit();

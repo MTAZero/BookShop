@@ -28,7 +28,6 @@ namespace BookShop.GUI
 
         #endregion
 
-
         #region LoadForm
         private void LoadInitControl()
         {
