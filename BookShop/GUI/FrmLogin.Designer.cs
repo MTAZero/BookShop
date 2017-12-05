@@ -33,14 +33,14 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtMatKhau = new System.Windows.Forms.TextBox();
+            this.txtTaiKhoan = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.defaultLookAndFeel1 = new DevExpress.LookAndFeel.DefaultLookAndFeel(this.components);
-            this.simpleButton2 = new DevExpress.XtraEditors.SimpleButton();
-            this.simpleButton1 = new DevExpress.XtraEditors.SimpleButton();
+            this.btnHuy = new DevExpress.XtraEditors.SimpleButton();
+            this.btnDangNhap = new DevExpress.XtraEditors.SimpleButton();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
             this.groupBox1.SuspendLayout();
@@ -74,10 +74,10 @@
             // panel2
             // 
             this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel2.Controls.Add(this.simpleButton2);
-            this.panel2.Controls.Add(this.simpleButton1);
-            this.panel2.Controls.Add(this.textBox2);
-            this.panel2.Controls.Add(this.textBox1);
+            this.panel2.Controls.Add(this.btnHuy);
+            this.panel2.Controls.Add(this.btnDangNhap);
+            this.panel2.Controls.Add(this.txtMatKhau);
+            this.panel2.Controls.Add(this.txtTaiKhoan);
             this.panel2.Controls.Add(this.label3);
             this.panel2.Controls.Add(this.label2);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -86,19 +86,20 @@
             this.panel2.Size = new System.Drawing.Size(372, 168);
             this.panel2.TabIndex = 0;
             // 
-            // textBox2
+            // txtMatKhau
             // 
-            this.textBox2.Location = new System.Drawing.Point(113, 72);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(211, 24);
-            this.textBox2.TabIndex = 3;
+            this.txtMatKhau.Location = new System.Drawing.Point(113, 72);
+            this.txtMatKhau.Name = "txtMatKhau";
+            this.txtMatKhau.Size = new System.Drawing.Size(211, 24);
+            this.txtMatKhau.TabIndex = 3;
+            this.txtMatKhau.UseSystemPasswordChar = true;
             // 
-            // textBox1
+            // txtTaiKhoan
             // 
-            this.textBox1.Location = new System.Drawing.Point(113, 28);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(211, 24);
-            this.textBox1.TabIndex = 2;
+            this.txtTaiKhoan.Location = new System.Drawing.Point(113, 28);
+            this.txtTaiKhoan.Name = "txtTaiKhoan";
+            this.txtTaiKhoan.Size = new System.Drawing.Size(211, 24);
+            this.txtTaiKhoan.TabIndex = 2;
             // 
             // label3
             // 
@@ -133,33 +134,35 @@
             // 
             this.defaultLookAndFeel1.LookAndFeel.SkinName = "Visual Studio 2013 Light";
             // 
-            // simpleButton2
+            // btnHuy
             // 
-            this.simpleButton2.Appearance.Font = new System.Drawing.Font("Times New Roman", 11F);
-            this.simpleButton2.Appearance.Options.UseFont = true;
-            this.simpleButton2.ButtonStyle = DevExpress.XtraEditors.Controls.BorderStyles.Flat;
-            this.simpleButton2.Image = ((System.Drawing.Image)(resources.GetObject("simpleButton2.Image")));
-            this.simpleButton2.Location = new System.Drawing.Point(224, 111);
-            this.simpleButton2.Name = "simpleButton2";
-            this.simpleButton2.Size = new System.Drawing.Size(100, 34);
-            this.simpleButton2.TabIndex = 5;
-            this.simpleButton2.Text = "Hủy";
+            this.btnHuy.Appearance.Font = new System.Drawing.Font("Times New Roman", 11F);
+            this.btnHuy.Appearance.Options.UseFont = true;
+            this.btnHuy.ButtonStyle = DevExpress.XtraEditors.Controls.BorderStyles.Flat;
+            this.btnHuy.Image = ((System.Drawing.Image)(resources.GetObject("btnHuy.Image")));
+            this.btnHuy.Location = new System.Drawing.Point(224, 111);
+            this.btnHuy.Name = "btnHuy";
+            this.btnHuy.Size = new System.Drawing.Size(100, 34);
+            this.btnHuy.TabIndex = 5;
+            this.btnHuy.Text = "Hủy";
+            this.btnHuy.Click += new System.EventHandler(this.btnHuy_Click);
             // 
-            // simpleButton1
+            // btnDangNhap
             // 
-            this.simpleButton1.Appearance.Font = new System.Drawing.Font("Times New Roman", 11F);
-            this.simpleButton1.Appearance.Options.UseFont = true;
-            this.simpleButton1.ButtonStyle = DevExpress.XtraEditors.Controls.BorderStyles.Flat;
-            this.simpleButton1.Image = ((System.Drawing.Image)(resources.GetObject("simpleButton1.Image")));
-            this.simpleButton1.Location = new System.Drawing.Point(113, 111);
-            this.simpleButton1.Name = "simpleButton1";
-            this.simpleButton1.Size = new System.Drawing.Size(100, 34);
-            this.simpleButton1.TabIndex = 4;
-            this.simpleButton1.Text = "Đăng nhập";
+            this.btnDangNhap.Appearance.Font = new System.Drawing.Font("Times New Roman", 11F);
+            this.btnDangNhap.Appearance.Options.UseFont = true;
+            this.btnDangNhap.ButtonStyle = DevExpress.XtraEditors.Controls.BorderStyles.Flat;
+            this.btnDangNhap.Image = ((System.Drawing.Image)(resources.GetObject("btnDangNhap.Image")));
+            this.btnDangNhap.Location = new System.Drawing.Point(113, 111);
+            this.btnDangNhap.Name = "btnDangNhap";
+            this.btnDangNhap.Size = new System.Drawing.Size(100, 34);
+            this.btnDangNhap.TabIndex = 4;
+            this.btnDangNhap.Text = "Đăng nhập";
+            this.btnDangNhap.Click += new System.EventHandler(this.btnDangNhap_Click);
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Image = global::BookShop.Properties.Resources.LoginIcon;
+            this.pictureBox1.Image = global::BookShop.Properties.Resources._62be20f0009610a74b37f3364260f35b;
             this.pictureBox1.Location = new System.Drawing.Point(167, 24);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(106, 106);
@@ -201,10 +204,10 @@
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox1;
-        private DevExpress.XtraEditors.SimpleButton simpleButton1;
+        private System.Windows.Forms.TextBox txtMatKhau;
+        private System.Windows.Forms.TextBox txtTaiKhoan;
+        private DevExpress.XtraEditors.SimpleButton btnDangNhap;
         private DevExpress.LookAndFeel.DefaultLookAndFeel defaultLookAndFeel1;
-        private DevExpress.XtraEditors.SimpleButton simpleButton2;
+        private DevExpress.XtraEditors.SimpleButton btnHuy;
     }
 }

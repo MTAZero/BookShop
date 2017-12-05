@@ -17,13 +17,15 @@ namespace BookShop.GUI
         private BookShopContext db = Helper.db;
         private NHANVIEN nv = new NHANVIEN();
 
-        public FrmMain()
+        #region Hàm khởi tạo
+        public FrmMain(NHANVIEN z)
         {
             InitializeComponent();
             Helper.Reload();
-            nv = db.NHANVIENs.Where(p => p.CHUCVU == 1).FirstOrDefault();
+            nv = z;
             Helper.IDNhanVien = nv.ID;
         }
+        #endregion
 
         #region Sự kiện mở các form chức năng
         private void barNhanVien_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
@@ -149,6 +151,11 @@ namespace BookShop.GUI
 
         private void FrmMain_Load(object sender, EventArgs e)
         {
+            if (nv.CHUCVU == 0)
+            {
+                pageQuanTri.Visible = false;
+                return;
+            }
         }
 
         

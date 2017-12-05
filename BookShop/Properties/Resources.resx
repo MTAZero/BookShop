@@ -121,4 +121,10 @@
   <data name="LoginIcon" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\LoginIcon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="book-open-flat" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\book-open-flat.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="62be20f0009610a74b37f3364260f35b" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\62be20f0009610a74b37f3364260f35b.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
 </root>

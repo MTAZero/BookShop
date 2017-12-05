@@ -362,6 +362,8 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Database.txt" />
+    <None Include="Resources\62be20f0009610a74b37f3364260f35b.png" />
+    <None Include="Resources\book-open-flat.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

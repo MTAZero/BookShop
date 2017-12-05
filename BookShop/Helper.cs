@@ -70,12 +70,25 @@ namespace BookShop
             return ans;
         }
 
+        public static int SoLuong(MATHANG a, DateTime batdau, DateTime ketthuc)
+        {
+            int ans = (
+                        from chitiet in db.CHITIETHOADONs.Where(p => p.MATHANGID == a.ID).ToList()
+                        from hoadon in db.HOADONBANs.Where(p =>p.ID == chitiet.HOADONBANID && p.NGAY >= batdau && p.NGAY <= ketthuc).ToList()
+                        select chitiet
+                      )
+                      .ToList()
+                      .Sum(p => (int)p.SOLUONG);
+
+            return ans;
+        }
+
         public static int GiaSanPham(MATHANG a)
         {
             int ans = 0;
 
-            if (a.LOAISP == 0) return (int) db.SACHes.Where(p => p.ID == a.SACHID).FirstOrDefault().GIABAN;
-            if (a.LOAISP == 1) return (int) db.VANPHONGPHAMs.Where(p => p.ID == a.VANPHONGPHAMID).FirstOrDefault().GIABAN;
+            if (a.LOAISP == 0) return (int)db.SACHes.Where(p => p.ID == a.SACHID).FirstOrDefault().GIABAN;
+            if (a.LOAISP == 1) return (int)db.VANPHONGPHAMs.Where(p => p.ID == a.VANPHONGPHAMID).FirstOrDefault().GIABAN;
 
             return ans;
         }

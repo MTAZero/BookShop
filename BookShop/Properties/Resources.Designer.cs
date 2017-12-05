@@ -63,6 +63,26 @@ namespace BookShop.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap _62be20f0009610a74b37f3364260f35b {
+            get {
+                object obj = ResourceManager.GetObject("62be20f0009610a74b37f3364260f35b", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap book_open_flat {
+            get {
+                object obj = ResourceManager.GetObject("book-open-flat", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap LoginIcon {
             get {
                 object obj = ResourceManager.GetObject("LoginIcon", resourceCulture);
