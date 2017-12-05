@@ -54,6 +54,7 @@
             this.barLapPhieuNhap = new DevExpress.XtraBars.BarButtonItem();
             this.barLapPhieuXuat = new DevExpress.XtraBars.BarButtonItem();
             this.barKho = new DevExpress.XtraBars.BarButtonItem();
+            this.barDangXuat = new DevExpress.XtraBars.BarButtonItem();
             this.pageNhanVien = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.ribbonPageGroup4 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonPageGroup6 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
@@ -112,9 +113,10 @@
             this.barDoiMatKhau,
             this.barLapPhieuNhap,
             this.barLapPhieuXuat,
-            this.barKho});
+            this.barKho,
+            this.barDangXuat});
             this.ribbonControl1.Location = new System.Drawing.Point(0, 0);
-            this.ribbonControl1.MaxItemId = 23;
+            this.ribbonControl1.MaxItemId = 24;
             this.ribbonControl1.Name = "ribbonControl1";
             this.ribbonControl1.Pages.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPage[] {
             this.pageNhanVien,
@@ -301,6 +303,15 @@
             this.barKho.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large;
             this.barKho.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barKho_ItemClick);
             // 
+            // barDangXuat
+            // 
+            this.barDangXuat.Caption = "Đăng xuất";
+            this.barDangXuat.Glyph = ((System.Drawing.Image)(resources.GetObject("barDangXuat.Glyph")));
+            this.barDangXuat.Id = 23;
+            this.barDangXuat.Name = "barDangXuat";
+            this.barDangXuat.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large;
+            this.barDangXuat.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barDangXuat_ItemClick);
+            // 
             // pageNhanVien
             // 
             this.pageNhanVien.Groups.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageGroup[] {
@@ -322,6 +333,7 @@
             // 
             this.ribbonPageGroup6.ItemLinks.Add(this.barThongTinCaNhan);
             this.ribbonPageGroup6.ItemLinks.Add(this.barDoiMatKhau);
+            this.ribbonPageGroup6.ItemLinks.Add(this.barDangXuat);
             this.ribbonPageGroup6.Name = "ribbonPageGroup6";
             this.ribbonPageGroup6.Text = "Tài khoản";
             // 
@@ -436,5 +448,6 @@
         private DevExpress.XtraBars.BarButtonItem barLapPhieuNhap;
         private DevExpress.XtraBars.BarButtonItem barLapPhieuXuat;
         private DevExpress.XtraBars.BarButtonItem barKho;
+        private DevExpress.XtraBars.BarButtonItem barDangXuat;
     }
 }

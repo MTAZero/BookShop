@@ -158,6 +158,14 @@ namespace BookShop.GUI
             }
         }
 
-        
+        private void barDangXuat_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            DialogResult rs = MessageBox.Show("Bạn có chắc chắn đăng xuất?",
+                                              "Thông báo",
+                                              MessageBoxButtons.OKCancel,
+                                              MessageBoxIcon.Error);
+            if (rs == DialogResult.Cancel) return;
+            this.Close();
+        }
     }
 }
