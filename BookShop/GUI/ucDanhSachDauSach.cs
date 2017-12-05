@@ -213,6 +213,7 @@ namespace BookShop.GUI
             cu.TEN = moi.TEN;
             cu.TACGIAID = moi.TACGIAID;
             cu.NXBID = moi.NXBID;
+            cu.THELOAIID = moi.THELOAIID;
             cu.GIABAN = moi.GIABAN;
             cu.NAMXUATBAN = moi.NAMXUATBAN;
             cu.THONGTINSACH = moi.THONGTINSACH;
