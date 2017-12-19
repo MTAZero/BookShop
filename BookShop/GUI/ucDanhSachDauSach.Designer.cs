@@ -36,6 +36,7 @@
             this.dgvSACH = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.STT = new DevExpress.XtraGrid.Columns.GridColumn();
             this.Ten = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.GiaBan = new DevExpress.XtraGrid.Columns.GridColumn();
             this.panel4 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.txtTimKiem = new System.Windows.Forms.TextBox();
@@ -45,6 +46,9 @@
             this.btnThem = new DevExpress.XtraEditors.SimpleButton();
             this.panel5 = new System.Windows.Forms.Panel();
             this.panel7 = new System.Windows.Forms.Panel();
+            this.cbxTheLoai = new DevExpress.XtraEditors.LookUpEdit();
+            this.cbxTacGia = new DevExpress.XtraEditors.LookUpEdit();
+            this.cbxNXB = new DevExpress.XtraEditors.LookUpEdit();
             this.txtThongTinSach = new DevExpress.XtraEditors.MemoEdit();
             this.txtNamXuatBan = new DevExpress.XtraEditors.TextEdit();
             this.txtGiaBan = new DevExpress.XtraEditors.TextEdit();
@@ -57,13 +61,9 @@
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.panel6 = new System.Windows.Forms.Panel();
+            this.imgAnh = new System.Windows.Forms.PictureBox();
             this.txtTitleTacGia = new System.Windows.Forms.Label();
             this.txtTitleTenSach = new System.Windows.Forms.Label();
-            this.imgAnh = new System.Windows.Forms.PictureBox();
-            this.GiaBan = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.cbxNXB = new DevExpress.XtraEditors.LookUpEdit();
-            this.cbxTacGia = new DevExpress.XtraEditors.LookUpEdit();
-            this.cbxTheLoai = new DevExpress.XtraEditors.LookUpEdit();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.groupBox1.SuspendLayout();
@@ -73,15 +73,15 @@
             this.panel3.SuspendLayout();
             this.panel5.SuspendLayout();
             this.panel7.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.cbxTheLoai.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cbxTacGia.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cbxNXB.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtThongTinSach.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtNamXuatBan.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtGiaBan.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtTenSach.Properties)).BeginInit();
             this.panel6.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.imgAnh)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.cbxNXB.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.cbxTacGia.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.cbxTheLoai.Properties)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -180,6 +180,15 @@
             this.Ten.Visible = true;
             this.Ten.VisibleIndex = 1;
             this.Ten.Width = 417;
+            // 
+            // GiaBan
+            // 
+            this.GiaBan.Caption = "Giá bán";
+            this.GiaBan.FieldName = "GiaBan";
+            this.GiaBan.Name = "GiaBan";
+            this.GiaBan.Visible = true;
+            this.GiaBan.VisibleIndex = 2;
+            this.GiaBan.Width = 216;
             // 
             // panel4
             // 
@@ -299,6 +308,57 @@
             this.panel7.Size = new System.Drawing.Size(824, 370);
             this.panel7.TabIndex = 2;
             // 
+            // cbxTheLoai
+            // 
+            this.cbxTheLoai.Location = new System.Drawing.Point(535, 92);
+            this.cbxTheLoai.Name = "cbxTheLoai";
+            this.cbxTheLoai.Properties.AllowNullInput = DevExpress.Utils.DefaultBoolean.False;
+            this.cbxTheLoai.Properties.Appearance.Font = new System.Drawing.Font("Times New Roman", 11F);
+            this.cbxTheLoai.Properties.Appearance.Options.UseFont = true;
+            this.cbxTheLoai.Properties.AppearanceDropDown.Font = new System.Drawing.Font("Times New Roman", 11F);
+            this.cbxTheLoai.Properties.AppearanceDropDown.Options.UseFont = true;
+            this.cbxTheLoai.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Flat;
+            this.cbxTheLoai.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.cbxTheLoai.Properties.ButtonsStyle = DevExpress.XtraEditors.Controls.BorderStyles.Flat;
+            this.cbxTheLoai.Properties.ShowHeader = false;
+            this.cbxTheLoai.Size = new System.Drawing.Size(247, 26);
+            this.cbxTheLoai.TabIndex = 4;
+            // 
+            // cbxTacGia
+            // 
+            this.cbxTacGia.Location = new System.Drawing.Point(535, 28);
+            this.cbxTacGia.Name = "cbxTacGia";
+            this.cbxTacGia.Properties.AllowNullInput = DevExpress.Utils.DefaultBoolean.False;
+            this.cbxTacGia.Properties.Appearance.Font = new System.Drawing.Font("Times New Roman", 11F);
+            this.cbxTacGia.Properties.Appearance.Options.UseFont = true;
+            this.cbxTacGia.Properties.AppearanceDropDown.Font = new System.Drawing.Font("Times New Roman", 11F);
+            this.cbxTacGia.Properties.AppearanceDropDown.Options.UseFont = true;
+            this.cbxTacGia.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Flat;
+            this.cbxTacGia.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.cbxTacGia.Properties.ButtonsStyle = DevExpress.XtraEditors.Controls.BorderStyles.Flat;
+            this.cbxTacGia.Properties.ShowHeader = false;
+            this.cbxTacGia.Size = new System.Drawing.Size(247, 26);
+            this.cbxTacGia.TabIndex = 2;
+            // 
+            // cbxNXB
+            // 
+            this.cbxNXB.Location = new System.Drawing.Point(142, 92);
+            this.cbxNXB.Name = "cbxNXB";
+            this.cbxNXB.Properties.AllowNullInput = DevExpress.Utils.DefaultBoolean.False;
+            this.cbxNXB.Properties.Appearance.Font = new System.Drawing.Font("Times New Roman", 11F);
+            this.cbxNXB.Properties.Appearance.Options.UseFont = true;
+            this.cbxNXB.Properties.AppearanceDropDown.Font = new System.Drawing.Font("Times New Roman", 11F);
+            this.cbxNXB.Properties.AppearanceDropDown.Options.UseFont = true;
+            this.cbxNXB.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Flat;
+            this.cbxNXB.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.cbxNXB.Properties.ButtonsStyle = DevExpress.XtraEditors.Controls.BorderStyles.Flat;
+            this.cbxNXB.Properties.ShowHeader = false;
+            this.cbxNXB.Size = new System.Drawing.Size(247, 26);
+            this.cbxNXB.TabIndex = 3;
+            // 
             // txtThongTinSach
             // 
             this.txtThongTinSach.Location = new System.Drawing.Point(142, 287);
@@ -415,6 +475,19 @@
             this.panel6.Size = new System.Drawing.Size(824, 172);
             this.panel6.TabIndex = 1;
             // 
+            // imgAnh
+            // 
+            this.imgAnh.BackColor = System.Drawing.Color.White;
+            this.imgAnh.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.imgAnh.Location = new System.Drawing.Point(19, 3);
+            this.imgAnh.Name = "imgAnh";
+            this.imgAnh.Size = new System.Drawing.Size(120, 160);
+            this.imgAnh.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.imgAnh.TabIndex = 3;
+            this.imgAnh.TabStop = false;
+            this.imgAnh.WaitOnLoad = true;
+            this.imgAnh.Click += new System.EventHandler(this.imgAnh_Click);
+            // 
             // txtTitleTacGia
             // 
             this.txtTitleTacGia.AutoSize = true;
@@ -437,79 +510,6 @@
             this.txtTitleTenSach.TabIndex = 1;
             this.txtTitleTenSach.Text = "Tôi thấy hoa vàng trên cỏ xanh";
             // 
-            // imgAnh
-            // 
-            this.imgAnh.BackColor = System.Drawing.Color.White;
-            this.imgAnh.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.imgAnh.Location = new System.Drawing.Point(19, 3);
-            this.imgAnh.Name = "imgAnh";
-            this.imgAnh.Size = new System.Drawing.Size(120, 160);
-            this.imgAnh.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.imgAnh.TabIndex = 3;
-            this.imgAnh.TabStop = false;
-            this.imgAnh.WaitOnLoad = true;
-            this.imgAnh.Click += new System.EventHandler(this.imgAnh_Click);
-            // 
-            // GiaBan
-            // 
-            this.GiaBan.Caption = "Giá bán";
-            this.GiaBan.FieldName = "GiaBan";
-            this.GiaBan.Name = "GiaBan";
-            this.GiaBan.Visible = true;
-            this.GiaBan.VisibleIndex = 2;
-            this.GiaBan.Width = 216;
-            // 
-            // cbxNXB
-            // 
-            this.cbxNXB.Location = new System.Drawing.Point(142, 92);
-            this.cbxNXB.Name = "cbxNXB";
-            this.cbxNXB.Properties.AllowNullInput = DevExpress.Utils.DefaultBoolean.False;
-            this.cbxNXB.Properties.Appearance.Font = new System.Drawing.Font("Times New Roman", 11F);
-            this.cbxNXB.Properties.Appearance.Options.UseFont = true;
-            this.cbxNXB.Properties.AppearanceDropDown.Font = new System.Drawing.Font("Times New Roman", 11F);
-            this.cbxNXB.Properties.AppearanceDropDown.Options.UseFont = true;
-            this.cbxNXB.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Flat;
-            this.cbxNXB.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.cbxNXB.Properties.ButtonsStyle = DevExpress.XtraEditors.Controls.BorderStyles.Flat;
-            this.cbxNXB.Properties.ShowHeader = false;
-            this.cbxNXB.Size = new System.Drawing.Size(247, 26);
-            this.cbxNXB.TabIndex = 3;
-            // 
-            // cbxTacGia
-            // 
-            this.cbxTacGia.Location = new System.Drawing.Point(535, 28);
-            this.cbxTacGia.Name = "cbxTacGia";
-            this.cbxTacGia.Properties.AllowNullInput = DevExpress.Utils.DefaultBoolean.False;
-            this.cbxTacGia.Properties.Appearance.Font = new System.Drawing.Font("Times New Roman", 11F);
-            this.cbxTacGia.Properties.Appearance.Options.UseFont = true;
-            this.cbxTacGia.Properties.AppearanceDropDown.Font = new System.Drawing.Font("Times New Roman", 11F);
-            this.cbxTacGia.Properties.AppearanceDropDown.Options.UseFont = true;
-            this.cbxTacGia.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Flat;
-            this.cbxTacGia.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.cbxTacGia.Properties.ButtonsStyle = DevExpress.XtraEditors.Controls.BorderStyles.Flat;
-            this.cbxTacGia.Properties.ShowHeader = false;
-            this.cbxTacGia.Size = new System.Drawing.Size(247, 26);
-            this.cbxTacGia.TabIndex = 2;
-            // 
-            // cbxTheLoai
-            // 
-            this.cbxTheLoai.Location = new System.Drawing.Point(535, 92);
-            this.cbxTheLoai.Name = "cbxTheLoai";
-            this.cbxTheLoai.Properties.AllowNullInput = DevExpress.Utils.DefaultBoolean.False;
-            this.cbxTheLoai.Properties.Appearance.Font = new System.Drawing.Font("Times New Roman", 11F);
-            this.cbxTheLoai.Properties.Appearance.Options.UseFont = true;
-            this.cbxTheLoai.Properties.AppearanceDropDown.Font = new System.Drawing.Font("Times New Roman", 11F);
-            this.cbxTheLoai.Properties.AppearanceDropDown.Options.UseFont = true;
-            this.cbxTheLoai.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Flat;
-            this.cbxTheLoai.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.cbxTheLoai.Properties.ButtonsStyle = DevExpress.XtraEditors.Controls.BorderStyles.Flat;
-            this.cbxTheLoai.Properties.ShowHeader = false;
-            this.cbxTheLoai.Size = new System.Drawing.Size(247, 26);
-            this.cbxTheLoai.TabIndex = 4;
-            // 
             // ucDanhSachDauSach
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -529,6 +529,9 @@
             this.panel5.ResumeLayout(false);
             this.panel7.ResumeLayout(false);
             this.panel7.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.cbxTheLoai.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cbxTacGia.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cbxNXB.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtThongTinSach.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtNamXuatBan.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtGiaBan.Properties)).EndInit();
@@ -536,9 +539,6 @@
             this.panel6.ResumeLayout(false);
             this.panel6.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.imgAnh)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.cbxNXB.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.cbxTacGia.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.cbxTheLoai.Properties)).EndInit();
             this.ResumeLayout(false);
 
         }

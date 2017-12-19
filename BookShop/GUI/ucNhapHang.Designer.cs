@@ -64,6 +64,8 @@
             this.NhanVien = new DevExpress.XtraGrid.Columns.GridColumn();
             this.ID = new DevExpress.XtraGrid.Columns.GridColumn();
             this.TongTien = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.label7 = new System.Windows.Forms.Label();
+            this.txtTimKiem = new System.Windows.Forms.TextBox();
             this.panel1.SuspendLayout();
             this.groupBox3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dateKetThuc.Properties.CalendarTimeProperties)).BeginInit();
@@ -98,7 +100,7 @@
             // txtTongGiaTri
             // 
             this.txtTongGiaTri.AutoSize = true;
-            this.txtTongGiaTri.Location = new System.Drawing.Point(16, 117);
+            this.txtTongGiaTri.Location = new System.Drawing.Point(16, 137);
             this.txtTongGiaTri.Name = "txtTongGiaTri";
             this.txtTongGiaTri.Size = new System.Drawing.Size(141, 17);
             this.txtTongGiaTri.TabIndex = 3;
@@ -106,13 +108,15 @@
             // 
             // groupBox3
             // 
+            this.groupBox3.Controls.Add(this.txtTimKiem);
+            this.groupBox3.Controls.Add(this.label7);
             this.groupBox3.Controls.Add(this.dateKetThuc);
             this.groupBox3.Controls.Add(this.dateBatDau);
             this.groupBox3.Controls.Add(this.label2);
             this.groupBox3.Controls.Add(this.label1);
             this.groupBox3.Location = new System.Drawing.Point(16, 14);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(568, 82);
+            this.groupBox3.Size = new System.Drawing.Size(568, 120);
             this.groupBox3.TabIndex = 2;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Bộ lọc phiếu nhập";
@@ -120,7 +124,7 @@
             // dateKetThuc
             // 
             this.dateKetThuc.EditValue = null;
-            this.dateKetThuc.Location = new System.Drawing.Point(358, 32);
+            this.dateKetThuc.Location = new System.Drawing.Point(368, 70);
             this.dateKetThuc.Name = "dateKetThuc";
             this.dateKetThuc.Properties.AllowNullInput = DevExpress.Utils.DefaultBoolean.False;
             this.dateKetThuc.Properties.Appearance.Font = new System.Drawing.Font("Times New Roman", 11F);
@@ -140,7 +144,7 @@
             // dateBatDau
             // 
             this.dateBatDau.EditValue = null;
-            this.dateBatDau.Location = new System.Drawing.Point(87, 32);
+            this.dateBatDau.Location = new System.Drawing.Point(97, 70);
             this.dateBatDau.Name = "dateBatDau";
             this.dateBatDau.Properties.AllowNullInput = DevExpress.Utils.DefaultBoolean.False;
             this.dateBatDau.Properties.Appearance.Font = new System.Drawing.Font("Times New Roman", 11F);
@@ -160,7 +164,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(280, 36);
+            this.label2.Location = new System.Drawing.Point(290, 74);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(72, 17);
             this.label2.TabIndex = 1;
@@ -169,7 +173,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(17, 36);
+            this.label1.Location = new System.Drawing.Point(27, 74);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(64, 17);
             this.label1.TabIndex = 0;
@@ -408,9 +412,9 @@
             this.groupBox1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left)));
             this.groupBox1.Controls.Add(this.dgvPhieuNhapMain);
-            this.groupBox1.Location = new System.Drawing.Point(16, 147);
+            this.groupBox1.Location = new System.Drawing.Point(16, 168);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(568, 380);
+            this.groupBox1.Size = new System.Drawing.Size(568, 359);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Danh sách hóa đơn :";
@@ -421,7 +425,7 @@
             this.dgvPhieuNhapMain.Location = new System.Drawing.Point(3, 20);
             this.dgvPhieuNhapMain.MainView = this.dgvPhieuNhap;
             this.dgvPhieuNhapMain.Name = "dgvPhieuNhapMain";
-            this.dgvPhieuNhapMain.Size = new System.Drawing.Size(562, 357);
+            this.dgvPhieuNhapMain.Size = new System.Drawing.Size(562, 336);
             this.dgvPhieuNhapMain.TabIndex = 2;
             this.dgvPhieuNhapMain.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.dgvPhieuNhap});
@@ -503,6 +507,23 @@
             this.TongTien.VisibleIndex = 3;
             this.TongTien.Width = 146;
             // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(27, 30);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(70, 17);
+            this.label7.TabIndex = 6;
+            this.label7.Text = "Tím kiếm :";
+            // 
+            // txtTimKiem
+            // 
+            this.txtTimKiem.Location = new System.Drawing.Point(97, 27);
+            this.txtTimKiem.Name = "txtTimKiem";
+            this.txtTimKiem.Size = new System.Drawing.Size(428, 24);
+            this.txtTimKiem.TabIndex = 7;
+            this.txtTimKiem.TextChanged += new System.EventHandler(this.txtTimKiem_TextChanged);
+            // 
             // ucNhapHang
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -570,5 +591,7 @@
         private DevExpress.XtraGrid.Columns.GridColumn ID;
         private DevExpress.XtraGrid.Columns.GridColumn TongTien;
         private System.Windows.Forms.Label txtTongGiaTri;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.TextBox txtTimKiem;
     }
 }

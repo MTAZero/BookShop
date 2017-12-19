@@ -51,6 +51,7 @@ namespace BookShop.GUI
                                                Ngay = ((DateTime)p.NGAY).ToString("dd/MM/yyyy"),
                                                NhanVien = db.NHANVIENs.Where(z => z.ID == p.NHANVIENID).FirstOrDefault().TEN
                                            })
+                                           .Where(p => p.MaHoaDon.ToUpper().Contains(txtTimKiem.Text.ToUpper()))
                                            .ToList();
 
                 txtTongGiaTri.Text = "Tổng giá trị : " +
@@ -156,8 +157,12 @@ namespace BookShop.GUI
                 return;
             }
         }
+
         #endregion
 
-
+        private void txtTimKiem_TextChanged(object sender, EventArgs e)
+        {
+            LoadDgvDanhSachHoaDon();
+        }
     }
 }
