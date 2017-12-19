@@ -36,6 +36,7 @@
             this.dgvVANPHONGPHAM = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.STT = new DevExpress.XtraGrid.Columns.GridColumn();
             this.Ten = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.NSX = new DevExpress.XtraGrid.Columns.GridColumn();
             this.panel4 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.txtTimKiem = new System.Windows.Forms.TextBox();
@@ -46,6 +47,7 @@
             this.panel5 = new System.Windows.Forms.Panel();
             this.panel7 = new System.Windows.Forms.Panel();
             this.panel8 = new System.Windows.Forms.Panel();
+            this.dateNgaySanXuat = new DevExpress.XtraEditors.DateEdit();
             this.txtNhaSanXuat = new DevExpress.XtraEditors.TextEdit();
             this.txtThongTin = new DevExpress.XtraEditors.MemoEdit();
             this.txtGiaBan = new DevExpress.XtraEditors.TextEdit();
@@ -59,8 +61,6 @@
             this.imgAnh = new System.Windows.Forms.PictureBox();
             this.txtTitleNhaSanXuat = new System.Windows.Forms.Label();
             this.txtTitleTen = new System.Windows.Forms.Label();
-            this.dateNgaySanXuat = new DevExpress.XtraEditors.DateEdit();
-            this.NSX = new DevExpress.XtraGrid.Columns.GridColumn();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.groupBox1.SuspendLayout();
@@ -71,14 +71,14 @@
             this.panel5.SuspendLayout();
             this.panel7.SuspendLayout();
             this.panel8.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dateNgaySanXuat.Properties.CalendarTimeProperties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dateNgaySanXuat.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtNhaSanXuat.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtThongTin.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtGiaBan.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtTen.Properties)).BeginInit();
             this.panel6.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.imgAnh)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dateNgaySanXuat.Properties.CalendarTimeProperties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dateNgaySanXuat.Properties)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -177,6 +177,15 @@
             this.Ten.Visible = true;
             this.Ten.VisibleIndex = 1;
             this.Ten.Width = 387;
+            // 
+            // NSX
+            // 
+            this.NSX.Caption = "Nhà cung cấp";
+            this.NSX.FieldName = "NSX";
+            this.NSX.Name = "NSX";
+            this.NSX.Visible = true;
+            this.NSX.VisibleIndex = 2;
+            this.NSX.Width = 253;
             // 
             // panel4
             // 
@@ -301,6 +310,25 @@
             this.panel8.Size = new System.Drawing.Size(820, 364);
             this.panel8.TabIndex = 0;
             // 
+            // dateNgaySanXuat
+            // 
+            this.dateNgaySanXuat.EditValue = null;
+            this.dateNgaySanXuat.Location = new System.Drawing.Point(156, 211);
+            this.dateNgaySanXuat.Name = "dateNgaySanXuat";
+            this.dateNgaySanXuat.Properties.AllowNullInput = DevExpress.Utils.DefaultBoolean.False;
+            this.dateNgaySanXuat.Properties.Appearance.Font = new System.Drawing.Font("Times New Roman", 11F);
+            this.dateNgaySanXuat.Properties.Appearance.Options.UseFont = true;
+            this.dateNgaySanXuat.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Flat;
+            this.dateNgaySanXuat.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.dateNgaySanXuat.Properties.ButtonsStyle = DevExpress.XtraEditors.Controls.BorderStyles.Flat;
+            this.dateNgaySanXuat.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.dateNgaySanXuat.Properties.Mask.EditMask = "dd/MM/yyyy";
+            this.dateNgaySanXuat.Properties.Mask.UseMaskAsDisplayFormat = true;
+            this.dateNgaySanXuat.Size = new System.Drawing.Size(157, 26);
+            this.dateNgaySanXuat.TabIndex = 4;
+            // 
             // txtNhaSanXuat
             // 
             this.txtNhaSanXuat.Location = new System.Drawing.Point(156, 83);
@@ -362,9 +390,9 @@
             this.label8.AutoSize = true;
             this.label8.Location = new System.Drawing.Point(38, 87);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(93, 17);
+            this.label8.Size = new System.Drawing.Size(97, 17);
             this.label8.TabIndex = 18;
-            this.label8.Text = "Nhà sản xuất :";
+            this.label8.Text = "Nhà cung cấp :";
             // 
             // label6
             // 
@@ -432,34 +460,6 @@
             this.txtTitleTen.TabIndex = 1;
             this.txtTitleTen.Text = "Bút bi thiên long";
             // 
-            // dateNgaySanXuat
-            // 
-            this.dateNgaySanXuat.EditValue = null;
-            this.dateNgaySanXuat.Location = new System.Drawing.Point(156, 211);
-            this.dateNgaySanXuat.Name = "dateNgaySanXuat";
-            this.dateNgaySanXuat.Properties.AllowNullInput = DevExpress.Utils.DefaultBoolean.False;
-            this.dateNgaySanXuat.Properties.Appearance.Font = new System.Drawing.Font("Times New Roman", 11F);
-            this.dateNgaySanXuat.Properties.Appearance.Options.UseFont = true;
-            this.dateNgaySanXuat.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Flat;
-            this.dateNgaySanXuat.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.dateNgaySanXuat.Properties.ButtonsStyle = DevExpress.XtraEditors.Controls.BorderStyles.Flat;
-            this.dateNgaySanXuat.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.dateNgaySanXuat.Properties.Mask.EditMask = "dd/MM/yyyy";
-            this.dateNgaySanXuat.Properties.Mask.UseMaskAsDisplayFormat = true;
-            this.dateNgaySanXuat.Size = new System.Drawing.Size(157, 26);
-            this.dateNgaySanXuat.TabIndex = 4;
-            // 
-            // NSX
-            // 
-            this.NSX.Caption = "NSX";
-            this.NSX.FieldName = "NSX";
-            this.NSX.Name = "NSX";
-            this.NSX.Visible = true;
-            this.NSX.VisibleIndex = 2;
-            this.NSX.Width = 253;
-            // 
             // ucDanhSachVanPhongPham
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -480,6 +480,8 @@
             this.panel7.ResumeLayout(false);
             this.panel8.ResumeLayout(false);
             this.panel8.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dateNgaySanXuat.Properties.CalendarTimeProperties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dateNgaySanXuat.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtNhaSanXuat.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtThongTin.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtGiaBan.Properties)).EndInit();
@@ -487,8 +489,6 @@
             this.panel6.ResumeLayout(false);
             this.panel6.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.imgAnh)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dateNgaySanXuat.Properties.CalendarTimeProperties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dateNgaySanXuat.Properties)).EndInit();
             this.ResumeLayout(false);
 
         }
